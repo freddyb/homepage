@@ -12,6 +12,7 @@
         <meta name="description" content="Frederik Braun is a security engineer at Mozilla, working on Firefox security." />
         <meta property="og:type" content="website"/>
         <meta name="twitter:card" content="summary"/>
+
         {% if article %}
           <meta property="og:title" content="{{ article.title }}"/>
           <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}"/>
@@ -20,8 +21,8 @@
           <meta property="og:title" content="{{ page.title }}"/>
           <meta property="og:url" content="{{ SITEURL }}/{{ page.save_as if page.save_as else page.url }}"/>
           <link rel="canonical" href="{{ SITEURL }}/{{ page.save_as if page.save_as else page.url }}"/>
-
         {% endif %}
+
         <noscript>
                 <link href="/theme/css/fira-sans.css" rel="stylesheet">
                 <link href="/theme/css/pygment.css" rel="stylesheet">
