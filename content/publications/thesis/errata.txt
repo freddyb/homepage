@@ -1,0 +1,23 @@
+There are currently no plans to publish a revised version of the thesis.
+Feedback and bugs will be collected in this file.
+
+
+--- January 2013
+Eric Lawrence (http://www.ericlawrence.com/), formerly of Microsoft, has
+provided this feedback via Twitter. Even though it hasn't been fully reviewed at
+this point, it might be of some benefit to the critical reader:
+
+Page 38: the URL appears to be "about:permissions" not "about:permission"
+Page 38: GeoLocation has been supported since IE9.
+Page 36 is confusing. No, IPs aren't checked. For thoughts on "hosting at the
+ TLD", see http://blogs.msdn.com/b/ieinternals/archive/2009/09/19/private-domain-names-and-public-suffixes-in-internet-explorer.aspx
+
+
+--- January 2013
+This feedback has been provided by Mario Heiderich (http://heideri.ch/):
+
+Section on P3P seems to imply it only applies to IE6. It's still in IE10, and
+ was (buggily) in Firefox for years.
+Content on Zones (page 20) appears to be a misunderstanding. Zones are
+ Origin-derived & LIZ does not bypass SOP.
+---    

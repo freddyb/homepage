@@ -1,0 +1,29 @@
+Title: (Self) XSS at Mozilla's internal Phonebook
+Date: 2014-05-23
+Slug: self-xss
+Author: Frederik
+
+This is a short summary about a goofy XSS/CSRF exploit on an internal
+webpage at Mozilla.
+A few weeks ago I discovered that our "phonebook" supports a limited
+wikisyntax in the profile descriptions. Despite proper sanitizing to
+forbid all markup injections into HTML tags and attributes it allowed
+linking to `javascript` URIs. Liking the rich capabilities that come with
+JavaScript, I naturally had to insert some script into my profile.
+So I started with a small script that changes the background color randomly.
+Like this:
+
+```
+setInterval("document.body.style.backgroundColor='#'+(Math.random()*10e16).toString(16).substr(0,6)",500)
+```
+
+What it does? Well, let's start simple. `setInterval(…,500)` runs the
+code supplied in the first argument every 500ms. The code itself is an
+assignment to the document's background color. So we change it quite often.
+The rest is a quick way to generate a random six digits hex string, i.e.
+an RGB color value: `Math.random()` gives a float with a lot of random
+digits after the floating point. Multiplying by 10e16 (that is a 10
+followed by 16 zeros) makes it a long integer without decimals. `toString(16)`
+transforms it into a hex string and `substr` cuts after six digits. Et violà!
+
+

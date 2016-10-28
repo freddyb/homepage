@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}{{ super() }} : {{ article.title }}{% endblock %}
+{% block content %}        
+<header>
+    <h1><a href="{{ SITEURL }}/{{ article.url }}" id="page-title">{{ article.title }}</a></h1>
+    {% if not HIDE_DATE %}<time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>{% endif %}
+</header>
+<article>
+    {{ article.content }}
+</article>
+
+
+{# List Articles #}
+{% for article in articles %}
+            {% if loop.length > 1 %}
+            {% if loop.first %}
+                <section id="article-list">
+                    <h4>Other posts</h4>
+                    <ol>
+            {% endif %}
+            {% endif %}
+            <li><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></li>
+{% endfor %}            
+{% if loop.length > 1 %}
+    </ol>
+    </section>
+{% endif %}
+
+
+
+{% endblock %}
+

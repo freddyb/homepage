@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content_title %}{% endblock %}
+{% block content %}        
+{% if pages %}
+    {% for page in pages %}        
+
+        {# Show Index page #}
+        {% if page.slug == 'index' %}
+            <header>
+                <h1><a href="{{ SITEURL }}/{{ page.save_as if page.save_as else page.url }}" id="page-title">{{ page.title }}</a></h1>
+            </header>
+            <article>
+                {{ page.content }}{% include 'comments.html' %}
+            </article>
+        {% endif %}            
+{% endfor %}
+{% else %}
+    No index page found.
+{% endif %}
+{% endblock content %}
