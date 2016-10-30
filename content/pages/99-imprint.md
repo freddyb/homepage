@@ -7,14 +7,14 @@ Date: 2016-02-26
 I prefer secure communications. If you ever find conflicting or mismatching data, reach out to me using another channel.
 
 ## E-Mail & GPG / PGP
-#### <span class='emailaddr' data-crypt="aeGaubcbunl*eufri)dhj">fb@(this domain)</span> (private)
+#### Main: <span class='emailaddr' data-crypt="aeGaubcbunl*eufri)dhj">fb@(this domain)</span>
 ```text
-pub   4096R/B8F4D2B6 2014-01-07
-E3B8 3D2C C3DD 3B42 254A  6A15 7566 4C69 B8F4 D2B6
+pub   2048R/404E0968 2016-10-21
+1331 4246 981D 2C81 F3B2  EEDD 8874 58AD 404E 0968
 
 ```
 
-#### <span class='emailaddr' data-crypt="aeufriGjh}nkkf)dhj">fbraun@(mozilla-dot-com)</span> (work)
+#### Work: <span class='emailaddr' data-crypt="aeufriGjh}nkkf)dhj">fbraun@(mozilla-dot-com)</span>
 ```text
 pub   2048R/DDC7ACA1 2014-01-06
 625B 9DCE E6EB 0722 ACFD  7BC7 16BF B94F DDC7 ACA1
