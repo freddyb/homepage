@@ -8,25 +8,20 @@
 <article>
     {{ article.content }}
 </article>
-
-
 {# List Articles #}
 {% for article in articles %}
             {% if loop.length > 1 %}
             {% if loop.first %}
-                <section id="article-list">
-                    <h4>Other posts</h4>
-                    <ol>
+    <section id="article-list">
+    <h4>Other posts</h4>
+    <ol>
             {% endif %}
             {% endif %}
-            <li><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></li>
+        <li><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></li>
 {% endfor %}            
 {% if loop.length > 1 %}
     </ol>
     </section>
 {% endif %}
-
-
-
 {% endblock %}
 
