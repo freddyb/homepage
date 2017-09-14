@@ -155,3 +155,4 @@ blockquote {
     border-left: 0.2em double black;
     padding-left: 0.5em;
 }
+.noboldstrong { font-weight: normal; }
