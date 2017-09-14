@@ -23,7 +23,8 @@ TRANSLATION_FEED_ATOM = None
 TRANSLATION_FEED_RSS = None
 
 TIMEZONE = 'Europe/Paris'
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = u'en_US'
+LOCALE = 'en_US'
 
 # Blogroll
 LINKS = ()

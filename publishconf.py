@@ -10,6 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
+LOCALE = 'en_US'
 SITEURL = 'https://frederik-braun.com'
 RELATIVE_URLS = False
 
