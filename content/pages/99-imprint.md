@@ -28,15 +28,5 @@ pub   2048R/DDC7ACA1 2014-01-06
 8D1F7B36 75B8A9C8 2DD14381 03DE4A94 45C46E8C
 ```
 
-## Impressum <small>(German law requires this ☹)</small>
-
-<script type="text/javascript" src="js/unhide-imprint.js"></script>
-
-<div id="o">
-<div style="max-width: 600px; margin:0 auto; font-size: 24pt; cursor: progress;">
-        <em>Wird geladen...<br>Loading... </em>
-</div>
-</div>
-
 <hr>
 <footer><small>Website created with <a href="http://blog.getpelican.com/">Pelican</a>. Theme/Layout based on <a href="http://mathieu.agopian.info/mnmlist/theme.html">Thème mnmlist</a> and <a href="http://justinjackson.ca/words.html">justinjackson.ca/words.html</a>.</small></footer>
