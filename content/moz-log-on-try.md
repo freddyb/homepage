@@ -14,7 +14,7 @@ the terminology in the title
 `MOZ_LOG` is an environment variable Firefox developers can use to tell
 specific code sections to emit verbose (or very verbose) status messages
 for some if its inner workings. This is also called
-[Gecko Logging](https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Gecko_Logging)
+[Gecko Logging](https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Gecko_Logging).
 
 ## what is the try server
 The [try server](https://firefox-source-docs.mozilla.org/tools/try/index.html)
