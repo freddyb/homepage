@@ -10,8 +10,8 @@
 
 body {
    margin: 0;
-   font-family: "Fira Sans", sans-serif;
-   font-size: larger;
+   font-family: Arial, sans-serif;
+   /*font-size: larger;*/
    border-top: 2px solid #1FA67A;
    line-height: 1.6;
 }
@@ -23,13 +23,13 @@ body {
     padding: 10px;
 }
 pre {
-  font-family: "Fira Mono", monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: smaller;
 }
 a, a:active, a:visited {
   color: #1FA67A;
   text-decoration: none;
-    font-weight: normal;
+  font-weight: normal;
   /*    border-bottom: 1px dotted black; */
 }
 hr {
