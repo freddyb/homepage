@@ -28,9 +28,6 @@ pre {
 }
 a, a:active, a:visited {
   color: #1FA67A;
-  text-decoration: none;
-  font-weight: normal;
-  /*    border-bottom: 1px dotted black; */
 }
 hr {
     border: none;
@@ -51,9 +48,9 @@ h1, h4 {     line-height: 1.2 }
 /* for / */
 #text1 {
 	width:500px;
- 	margin-bottom:8em;
- 	padding:0;
- 	text-align:left;
+	margin-bottom:8em;
+	padding:0;
+	text-align:left;
 	margin: 0 auto;
 }
 
@@ -95,9 +92,6 @@ nav > ul {
 nav > ul > li {
     display: inline;
     padding-right: 30px;    
-}
-nav > ul > li > a,a:active,a:visited {
-      font-weight: 600;
 }
 
 }
