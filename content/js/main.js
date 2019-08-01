@@ -13,16 +13,12 @@ window.addEventListener('load', function() {
     }
 });
 // load bigger styles later
-// (so that fira-sans and pygment don't block page load)
+// (so pygment don't block page load)
 var loadStyles = function() {
-  var lfont = document.createElement('link');
-  lfont.rel = 'stylesheet';
-  lfont.href = '/theme/css/fira-sans.css'; // fira-sans font
   var lcode = document.createElement('link');
   lcode.rel = 'stylesheet';
   lcode.href = '/theme/css/pygment.css'; // code highlighting
   var h = document.getElementsByTagName('head')[0];
-  h.parentNode.insertBefore(lfont, h);
   h.parentNode.insertBefore(lcode, h);  
 };
 var raf = requestAnimationFrame || mozRequestAnimationFrame ||
