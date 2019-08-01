@@ -3,7 +3,6 @@ Date: 2014-10-14
 Slug: thoughts-on-tor-appliances
 Author: Frederik
 
-
 # Anonabox is not a magic bullet!
 
 Yesterday, a lot of mainstream media (e.g., [WIRED](http://www.wired.com/2014/10/tiny-box-can-anonymize-everything-online/?mbid=social_twitter)) started reporting about [anonabox](https://www.kickstarter.com/projects/augustgermar/anonabox-a-tor-hardware-router), an "an open source embedded networking device designed specifically to run Tor.", to quote their Kickstarter campaign.

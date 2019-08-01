@@ -3,8 +3,6 @@ Date: 2016-09-02
 Author: Frederik
 Slug: squeezebox-radio-ssh-default-password
 
-# Finding the SqueezeBox Radio Default SSH Passwort
-
 ***Note:*** *This post was originally hosted somewhere else. Republishing here for better visibility.
 Also, the slimdevices wiki has a section on SSH authentication that [mentions the default password](http://wiki.slimdevices.com/index.php/Squeezebox_SSH_public_key_authentication). I must have missed it.*
 

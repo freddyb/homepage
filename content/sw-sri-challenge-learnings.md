@@ -3,8 +3,6 @@ Date: 2017-03-25
 Author: Frederik
 Slug: sw-sri-challenge
 
-# Challenge Write-up: Subresource Integrity in Service Workers
-
 For those who have not participated in my [challenge](https://serviceworker.on.web.security.plumbing/), this document is about implementing security features in ServiceWorkers. A
 ServiceWorker (SW) is a type of [Web Worker](https://duckduckgo.com/?q=web+worker&t=ffab&ia=web) that can intercept and modify HTTP requests. A ServiceWorker is allowed to see requests towards your own as well as other origins – though it [must not](https://frederik-braun.com/publications/thesis/Thesis-Origin_Policy_Enforcement_in_Modern_Browsers.pdf) be able to see the response from cross-origin resources.
 
