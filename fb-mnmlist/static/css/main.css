@@ -9,144 +9,158 @@
 */
 
 body {
-   margin: 0;
-   font-family: Arial, sans-serif;
-   /*font-size: larger;*/
-   border-top: 2px solid #1FA67A;
-   line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /*font-size: larger;*/
+  border-top: 2px solid #1fa67a;
+  line-height: 1.6;
 }
 
 #wrapper {
-    margin: 0 auto;
-    /*! margin-left: 0; */
-    /*! width: 45%; */
-    padding: 10px;
+  margin: 0 auto;
+  /*! margin-left: 0; */
+  /*! width: 45%; */
+  padding: 10px;
 }
 pre {
   font-family: "Courier New", Courier, monospace;
   font-size: smaller;
 }
-a, a:active, a:visited {
-  color: #1FA67A;
+a,
+a:active,
+a:visited {
+  color: #1fa67a;
 }
 hr {
-    border: none;
-    height: 1px;
-    background-color: #ddd;
+  border: none;
+  height: 1px;
+  background-color: #ddd;
 }
 h1 > a {
-    text-decoration: none;
+  text-decoration: none;
 }
 h1 {
-    margin: 1em;
+  margin: 1em;
 }
-h1, h4 {     line-height: 1.2 }
-
+h1,
+h4 {
+  line-height: 1.2;
+}
 
 @media screen and (min-width: 768px) {
+  /* for / */
+  #text1 {
+    width: 500px;
+    margin-bottom: 8em;
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+  }
 
-/* for / */
-#text1 {
-	width:500px;
-	margin-bottom:8em;
-	padding:0;
-	text-align:left;
-	margin: 0 auto;
-}
+  /* for /publications */
+  #text1 > ul > li {
+    margin-bottom: 30px;
+  }
 
-/* for /publications */
-#text1 > ul > li {
-  margin-bottom: 30px;
-}
+  time {
+    font-style: italic;
+    font-size: 8pt;
+  }
 
-time {
- font-style: italic;
- font-size: 8pt;
-}
+  /* for archives.html */
+  dt {
+    margin-top: 10px;
+  }
 
-/* for archives.html */
-dt { margin-top: 10px; }
+  small {
+    font-size: 8pt;
+  }
 
-small { font-size: 8pt; }
+  /* make code not overflow the main div*/
+  .highlight > pre {
+    overflow: auto;
+  }
 
-/* make code not overflow the main div*/
-.highlight > pre {
-overflow: auto;
-}
-
-
-nav {
+  nav {
     height: 65px;
     /*! margin-left: 8px; */
-
-}
-nav > h4 {
-    display:inline;
-    float:left;
-}
-nav > ul {
-    margin-top: 21px;
-    float:left ;
-    padding-left: 10px;
-}
-nav > ul > li {
+  }
+  nav > h4 {
     display: inline;
-    padding-right: 30px;    
-}
-
+    float: left;
+  }
+  nav > ul {
+    margin-top: 21px;
+    float: left;
+    padding-left: 10px;
+  }
+  nav > ul > li {
+    display: inline;
+    padding-right: 30px;
+  }
 }
 
 /*************************************/
-input[type=checkbox] {
+input[type="checkbox"] {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
 
 label {
-  display:none;
+  display: none;
   cursor: pointer;
 }
 
-nav[role="custom-dropdown"]  > label {
-    display: none;
-  }
-
-
+nav[role="custom-dropdown"] > label {
+  display: none;
+}
 
 @media screen and (max-width: 768px) {
-    hr { display: none; }
-    header > h1 { border-bottom: 1px solid #ddd; margin-left: 0; margin-right: 0; vertical-align: center; }
-    nav { margin: 8px; }
-    nav > h4 { display: none; }
-    nav[role="custom-dropdown"] > ul {
-      display: none;
-      height: 100%;
-    }
+  hr {
+    display: none;
+  }
+  header > h1 {
+    border-bottom: 1px solid #ddd;
+    margin-left: 0;
+    margin-right: 0;
+    vertical-align: center;
+  }
+  nav {
+    margin: 8px;
+  }
+  nav > h4 {
+    display: none;
+  }
+  nav[role="custom-dropdown"] > ul {
+    display: none;
+    height: 100%;
+  }
 
-    nav[role="custom-dropdown"] > label {
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
+  nav[role="custom-dropdown"] > label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 
-    nav[role="custom-dropdown"] > label:after {
-        position: absolute;
-        content: "\2261";
-    }
-    nav[role="custom-dropdown"] > input:checked ~ ul {
-      display: block;
-
-    }
-    nav[role="custom-dropdown"] > ul > li {
-        width: 100%;
-        display: block;
-    }
+  nav[role="custom-dropdown"] > label:after {
+    position: absolute;
+    content: "\2261";
+  }
+  nav[role="custom-dropdown"] > input:checked ~ ul {
+    display: block;
+  }
+  nav[role="custom-dropdown"] > ul > li {
+    width: 100%;
+    display: block;
+  }
 }
 blockquote {
-    font-style: italic;
-    border-left: 0.2em double black;
-    padding-left: 0.5em;
+  font-style: italic;
+  border-left: 0.2em double black;
+  padding-left: 0.5em;
 }
-.noboldstrong { font-weight: normal; }
+.noboldstrong {
+  font-weight: normal;
+}
