@@ -12,7 +12,6 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   /*font-size: larger;*/
-  border-top: 2px solid #1fa67a;
   line-height: 1.6;
 }
 
@@ -29,7 +28,7 @@ pre {
 a,
 a:active,
 a:visited {
-  color: #1fa67a;
+  color: #1f54a6;
 }
 hr {
   border: none;
