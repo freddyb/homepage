@@ -11,6 +11,7 @@ Slug: firefox-ui-xss-leading-to-rce
 
 # Prologue
 (This is the part, where we reduce the lighting and shine a flashlight into my face)
+
 *Listen, well, young folks. Old people, browser hackers or Mozilla fanboys, might use this as an opportunity to lean back and stroke their mighty neckbeard, as they have heard all of this before*
 
 It was the year 1997, and people thought XML was a great idea. In fact, it was so much better than its warty and unparseable predecessor HTML. While XHTML was the clear winner and successor for great web applications, it was *obvious* that XML would make a great user interface markup language to create a powerful cross-platform toolkit dialect.
