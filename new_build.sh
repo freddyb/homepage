@@ -5,4 +5,4 @@ source venv/bin/activate
 make html
 make publish
 
-scp -r output/* freddyb@dubhe.uberspace.de:web/frederik-braun.com/
+rsync -v -r output/* freddyb@dubhe.uberspace.de:web/frederik-braun.com/
