@@ -49,7 +49,7 @@ h4 {
 @media screen and (min-width: 768px) {
   /* for / */
   #text1 {
-    width: 500px;
+    width: 1012px;
     margin-bottom: 8em;
     padding: 0;
     text-align: left;
@@ -157,7 +157,7 @@ nav[role="custom-dropdown"] > label {
 }
 blockquote {
   font-style: italic;
-  border-left: 0.2em double black;
+  border-left: 0.2em solid black;
   padding-left: 0.5em;
 }
 .noboldstrong {
