@@ -109,7 +109,7 @@ injections](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/aZsNy
 - *November 2018* - [Chrome error pages can be observed in an iframe, due to
 the `onerror` event being triggered
 twice](https://portswigger.net/blog/exposing-intranets-with-reliable-browser-based-port-scanning),
-which allows for cross-site leak attacks
+which allows for [cross-site leak attacks
 ](https://github.com/xsleaks/xsleaks/wiki/Browser-Side-Channels#xss-filters).
 * *January 2019* (hitting Chrome stable in April 2019) - [XSSAuditor switching
 back to
