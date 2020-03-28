@@ -14,9 +14,8 @@ which I have been working on since 2014.
 
 In the fall of 2013 I have co-authored a whitepaper about [the
 benefits of the X-Frame-Options security header](xfo-clickjacking.pdf) with [Mario
-Heiderich](http://heideri.ch/). It actually mostly showcases some nifty tricks and
-attacks that you can carry out when a website _can_ be
-framed.
+Heiderich](http://heideri.ch/). It mostly shows
+attacks and techniques against website that _can_ be framed.
 
 I once wrote a [thesis](/publications "Origin Policy Enforcement in Modern Browsers")
 about the Same Origin Policy and its state in the API-rich HTML5
