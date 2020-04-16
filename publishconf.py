@@ -10,13 +10,19 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-LOCALE = 'en_US'
+# If your site is available via HTTPS, make sure SITEURL begins with https://
 SITEURL = 'https://frederik-braun.com'
-RELATIVE_URLS = False
+RELATIVE_URLS = True
 
-
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
+
+LOCALE = 'en_US'
+
+STATIC_PATHS = ['images', 'publications', 'publications/thesis', 'js']
+
 
 # Following items are often useful when publishing
 

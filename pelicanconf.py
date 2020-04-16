@@ -4,8 +4,13 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Frederik'
 SITENAME = u"Frederik Braun"
+SITEURL = 'https://frederik-braun.com'
+
 
 RELATIVE_URLS = True ## for testing, shouldnt point to actual domain
+
+PATH = 'content'
+
 
 
 # Feed generation: generate "all in one" feed, but omit feeds per category,tag,author
