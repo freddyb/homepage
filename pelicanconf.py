@@ -54,3 +54,7 @@ THEME = "/home/freddy/src/homepage/fb-mnmlist"
 
 #PIWIK_URL = "piwik-qxawkjrxp.rhcloud.com"
 #PIWIK_SITE_ID = 1
+
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ["yuicompressor"]
+YUICOMPRESSOR_EXECUTABLE = 'yui-compressor'
