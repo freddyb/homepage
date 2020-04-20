@@ -1,5 +1,5 @@
 blinker==1.4
-docutils==0.12
+docutils==0.16
 feedgenerator==1.9.1
 Jinja2==2.8
 Markdown==3.2.1
