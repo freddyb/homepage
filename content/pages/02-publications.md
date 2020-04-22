@@ -2,6 +2,7 @@ Title: Publications
 Slug: publications
 
 <!-- chronologically descending order. add on top -->
+* [Hardening Firefox against Injection Attacks (PDF)](/publications/hardening_paper.pdf), with Christoph Kerschbaumer, Tom Ritter; SecWeb - Designing Security for the Web; Genova, Italy, September 2020
 * [Subresource Integrity](https://www.w3.org/TR/SRI/), a W3C specification for conditionally loading third-party scripts based on their cryptographic digest.
 * [X-Frame-Options: All about Clickjacking?](/xfo-clickjacking.pdf)
 Whitepaper together with Mario Heiderich, Fall 2013
