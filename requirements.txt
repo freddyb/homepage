@@ -13,4 +13,4 @@ pytz==2015.7
 setuptools==40.4.2
 six==1.14.0
 Unidecode==0.4.19
-wheel==0.31.1
+wheel==0.34.2
