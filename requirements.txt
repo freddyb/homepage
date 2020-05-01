@@ -9,7 +9,7 @@ pip==20.1
 pkg-resources==0.0.0
 Pygments==2.6.1
 python-dateutil==2.8.1
-pytz==2015.7
+pytz==2020.1
 setuptools==46.1.3
 six==1.14.0
 Unidecode==0.4.19
