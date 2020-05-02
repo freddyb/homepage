@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/theme/css/{{ CSS_FILE }}" type="text/css" />
-    <script async type="text/javascript" src="/js/main.js"></script>
-    <link href="data:image/gif;base64,R0lGODlhEAAQAPABAB9UpgAAACH5BAUKAAEALAAAAAAQABAAAAIijI+py+0OojQyHpuwBmrTelVcgCEeOZqpVYbfm4nPTNd2AQA7" rel="icon">
-    <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
-    <link href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
-    <meta property="og:site_name" content="Frederik Braun"/>
-    <meta property="og:type" content="website"/>
-    <meta name="twitter:card" content="summary"/>
-  {% if article %}
-    <meta name="description" content="Frederik Braun - {{ article.title }}" />
-    <meta property="og:title" content="Frederik Braun - {{ article.title }}"/>
-    <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}"/>
-    <meta name="twitter:title" content="Frederik Braun - {{ article.title }}" />
-    <meta name="twitter:description" content="Click to view Frederik's blog post" />
-    <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}"/>
-  {% elif page %}
-    <meta name="description" content="Frederik Braun is a security engineer at Mozilla, working on Firefox security." />
-    <meta property="og:title" content="{{ page.title }}"/>
-    <meta property="og:url" content="{{ SITEURL }}/{{ page.save_as if page.save_as else page.url }}"/>
-    <meta name="twitter:title" content="{{ page.title }}" />
-    <meta name="twitter:description" content="Click to view Frederik's page" />
-    <link rel="canonical" href="{{ SITEURL }}/{{ page.save_as if page.save_as else page.url }}"/>
-  {% endif %}
+  <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/theme/css/{{ CSS_FILE }}" type="text/css" />
+  <link href="data:image/gif;base64,R0lGODlhEAAQAPABAB9UpgAAACH5BAUKAAEALAAAAAAQABAAAAIijI+py+0OojQyHpuwBmrTelVcgCEeOZqpVYbfm4nPTNd2AQA7" rel="icon">
+  <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
+  <link href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+  <meta property="og:site_name" content="Frederik Braun"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary"/>
+{% if article %}
+  <meta name="description" content="Frederik Braun - {{ article.title }}" />
+  <meta property="og:title" content="Frederik Braun - {{ article.title }}"/>
+  <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}"/>
+  <meta name="twitter:title" content="Frederik Braun - {{ article.title }}" />
+  <meta name="twitter:description" content="Click to view Frederik's blog post" />
+  <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}"/>
+{% elif page %}
+  <meta name="description" content="Frederik Braun is a security engineer at Mozilla, working on Firefox security." />
+  <meta property="og:title" content="{{ page.title }}"/>
+  <meta property="og:url" content="{{ SITEURL }}/{{ page.save_as if page.save_as else page.url }}"/>
+  <meta name="twitter:title" content="{{ page.title }}" />
+  <meta name="twitter:description" content="Click to view Frederik's page" />
+  <link rel="canonical" href="{{ SITEURL }}/{{ page.save_as if page.save_as else page.url }}"/>
+{% endif %}
 </head>
 
 <body>
 {% include 'github.html' %}
 <nav role="custom-dropdown">
-      <input type="checkbox" id="button">
-      <label for="button" onclick></label>
-      <ul>
-                {% for page in pages %}
-                    <li><a href="{{ SITEURL }}/{{ page.save_as if page.save_as else page.url }}">{{ page.title }}</a></li>
-                {% endfor %}
-                {% if categories|length > 1 %}
-                    <li><a href="{{ SITEURL }}/categories.html">Categories</a></li>
-                {% endif %}
-                {% if tags|length > 1 %}
-                    <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
-                {% endif %}
-                    <li><a href="{{ SITEURL }}/archives.html">Blog</a></li>
-
-      </ul>
-    </nav>
+  <input type="checkbox" id="button">
+  <label for="button" onclick></label>
+  <ul>
+{% for page in pages %}
+    <li><a href="{{ SITEURL }}/{{ page.save_as if page.save_as else page.url }}">{{ page.title }}</a></li>
+{% endfor %}
+{% if categories|length > 1 %}
+    <li><a href="{{ SITEURL }}/categories.html">Categories</a></li>
+{% endif %}
+{% if tags|length > 1 %}
+    <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
+{% endif %}
+    <li><a href="{{ SITEURL }}/archives.html">Blog</a></li>
+    </ul>
+</nav>
 <hr>
 <div id='wrapper'>
-    <div id='text1'>
+<div id='text1'>
         {% block content %}
         {% endblock %}
-    </div>
+</div>
 </div>
 {% include 'analytics.html' %}
 {% include 'piwik.html' %}

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 export LANG=en_US.UTF-8
 source venv/bin/activate
 
