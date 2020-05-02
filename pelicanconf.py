@@ -58,3 +58,4 @@ THEME = "/home/freddy/src/homepage/fb-mnmlist"
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ["yuicompressor"]
 YUICOMPRESSOR_EXECUTABLE = 'yui-compressor'
+

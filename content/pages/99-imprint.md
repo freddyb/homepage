@@ -245,6 +245,8 @@ IkgeWVXEhitnTrG8Wdc72SbFYlhrYxOIDna1JlY=
 ```
 
 </details>
+<script>window.addEventListener("load",function(){var c=document.querySelectorAll(".emailaddr");for(var f=0;f<c.length;f++){var b=c[f];var a=b.dataset.crypt;var d="";for(i=0;i<a.length;i++){d+=String.fromCharCode(a.charCodeAt(i)^7)}b.innerHTML="<a href='mailto:"+d+"'>"+d+"</a>"}});</script>
+
 
 <hr>
 <footer><small>Website created with <a href="http://blog.getpelican.com/">Pelican</a>. Theme/Layout based on <a href="http://mathieu.agopian.info/mnmlist/theme.html">Thème mnmlist</a> and <a href="http://justinjackson.ca/words.html">justinjackson.ca/words.html</a>.</small></footer>
