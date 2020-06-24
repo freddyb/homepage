@@ -337,3 +337,11 @@ blockquote {
 .il {
   color: #208050;
 }
+@media (prefers-color-scheme: dark) {
+  html { 
+    filter: invert() hue-rotate(180deg) contrast(80%);
+    background-color: darkgrey;
+  }
+  html img, html video {
+    filter: invert() hue-rotate(180deg) contrast(100%); }
+}
