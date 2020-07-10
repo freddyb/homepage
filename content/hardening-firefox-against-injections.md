@@ -2,7 +2,7 @@ Title: Hardening Firefox against Injection Attacks – The Technical Details
 Date: 2020-07-07
 Author: Frederik
 
-*This blog post has first appeared on the [Mozilla Attack & Defense blog]https://blog.mozilla.org/attack-and-defense/2020/07/07/hardening-firefox-against-injection-attacks-the-technical-details/) and was co-authored with Christoph Kerschbaumer and Tom Ritter*
+*This blog post has first appeared on the [Mozilla Attack & Defense blog](https://blog.mozilla.org/attack-and-defense/2020/07/07/hardening-firefox-against-injection-attacks-the-technical-details/) and was co-authored with Christoph Kerschbaumer and Tom Ritter*
 
 In a recent academic publication titled [Hardening Firefox against
 Injection
