@@ -41,7 +41,7 @@ by context separation.
 
  
 
-<img src="images/chrome_vs_content-600x428" width="450" height="321" />
+<img src="images/chrome_vs_content-600x428.jpg" width="450" height="321" />
 
 <span id="caption-attachment-150"></span>**Firefox Security
 Architecture** showing the separation of privileged chrome code and the
