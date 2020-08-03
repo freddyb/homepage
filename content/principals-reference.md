@@ -8,7 +8,8 @@ The details and the big picture are covered in [Understanding Web Security Check
 
 # Principals as a level of privilege
 A security context is always using one of these four kinds of Principals:
-* **ContentPrincipal**: This principal is used for typical web pages and can be serialized to an origin URL, e.g., https://example.com/
+* **ContentPrincipal**: This principal is used for typical web pages and can be serialized to an origin URL, e.g., https://example.com/.
+
 * **NullPrincipal**: Some pages are never same-origin with anything else. E.g., `<iframes sandbox>` or documents loaded with a data: URI. The standard calls this an [opaque origin](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-opaque).
 * **SystemPrincipal**: The SystemPrincipal is used for the browser's user interface, commonly referred to as "browser chrome". Pages like `about:preferences` use the SystemPrincipal.
 * **ExpandedPrincipal**: A browser extension is more privileged than normal web pages, but must also be able to assume the security context of a website. Hence, an ExpandedPrincipal is best understood as a list of principals to match the security needs for Content Scripts in Firefox Extensions. The security checks on the ExpandedPrincipal are then implemented as a loop through this allowlist of principals.
