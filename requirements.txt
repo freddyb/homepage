@@ -10,7 +10,7 @@ pkg-resources==0.0.0
 Pygments==2.7.1
 python-dateutil==2.8.1
 pytz==2020.1
-setuptools==49.1.1
+setuptools==50.3.0
 six==1.15.0
 Unidecode==1.1.1
 wheel==0.35.1
