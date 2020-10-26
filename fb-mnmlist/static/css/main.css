@@ -11,7 +11,6 @@ body {
 }
 pre {
   font-family: "Courier New", Courier, monospace;
-  font-size: smaller;
 }
 a,
 a:active,
@@ -26,12 +25,12 @@ hr {
 h1 > a {
   text-decoration: none;
 }
-h1 {
-  margin: 1em;
-}
 h1,
 h4 {
   line-height: 1.2;
+}
+img {
+  max-size: 100%;
 }
 @media screen and (min-width: 768px) {
   #text1 {
