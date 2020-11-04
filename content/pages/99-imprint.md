@@ -4,20 +4,13 @@ save_as: contact.html
 Date: 2016-02-26
 
 
-## Keybase
-Find me as <a href="https://keybase.io/freddyb">freddyb on keybase</a>.
+## E-Mail
+#### <span class='emailaddr' data-crypt="aeGaubcbunl*eufri)dhj">fb@(this domain)</span>
 
-## E-Mail & GPG / PGP
-#### Main: <span class='emailaddr' data-crypt="aeGaubcbunl*eufri)dhj">fb@(this domain)</span>
 
-**Note: This is a new key as of Feb 7th 2020. You'll notice that
-my previous key 0x404E0968 has been revoked.**
-
-```text
-pub  3072R/ED713760 2020-02-07            
-Fingerprint=BA67 3ED1 0CCA 8A5C 103A  06CB 6F12 D476 ED71 3760 
-```
-<details><summary>Click to expand full publickey</summary>
+<details><summary>
+<code>BA67 3ED1 0CCA 8A5C 103A  06CB 6F12 D476 ED71 3760</code>
+</summary>
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -73,13 +66,14 @@ UZMmnvpBJy6b1x2tHYqa3fWEqe0faCawhnrXEyyQgthd4cvF1osQ
 ```
 </details>
 
-#### Work: <span class='emailaddr' data-crypt="aeufriGjh}nkkf)dhj">fbraun@(mozilla-dot-com)</span>
-```text
-pub   2048R/DDC7ACA1 2014-01-06
-625B 9DCE E6EB 0722 ACFD  7BC7 16BF B94F DDC7 ACA1
 
-```
-<details><summary>Click to expand full publickey</summary>
+
+
+#### <span class='emailaddr' data-crypt="aeufriGjh}nkkf)dhj">fbraun@(mozilla-dot-com)</span>
+
+<details><summary>
+<code>625B 9DCE E6EB 0722 ACFD  7BC7 16BF B94F DDC7 ACA1</code>
+</summary>
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: SKS 1.1.6
@@ -243,8 +237,15 @@ IkgeWVXEhitnTrG8Wdc72SbFYlhrYxOIDna1JlY=
 =ivY4
 -----END PGP PUBLIC KEY BLOCK-----
 ```
-
 </details>
+
+## Social
+* <a href="https://mobile.twitter.com/freddyb">freddyb on Twitter</a>
+* <a href="https://github.com/freddyb">freddyb on GitHub</a>
+* <a href="https://github.com/mozfreddyb">mozfreddyb on GitHub</a>
+* <a href="https://keybase.io/freddyb">freddyb on keybase</a>.
+
+
 <script>window.addEventListener("load",function(){var c=document.querySelectorAll(".emailaddr");for(var f=0;f<c.length;f++){var b=c[f];var a=b.dataset.crypt;var d="";for(i=0;i<a.length;i++){d+=String.fromCharCode(a.charCodeAt(i)^7)}b.innerHTML="<a href='mailto:"+d+"'>"+d+"</a>"}});</script>
 
 

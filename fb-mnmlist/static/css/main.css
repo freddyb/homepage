@@ -454,3 +454,4 @@ blockquote {
   margin-right:0
  }
 }
+details > summary > code { font-size: small }
