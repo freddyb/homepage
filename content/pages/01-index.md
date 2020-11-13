@@ -1,4 +1,4 @@
-Title: About
+Title: Frederik Braun
 Slug: index
 save_as: index.html
 
