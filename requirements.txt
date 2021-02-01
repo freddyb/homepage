@@ -7,7 +7,7 @@ MarkupSafe==1.1.1
 pelican==4.5.0
 pip==20.2.3
 pkg-resources==0.0.0
-Pygments==2.7.1
+Pygments==2.7.4
 python-dateutil==2.8.1
 pytz==2020.1
 setuptools==50.3.0
