@@ -12,5 +12,5 @@ python-dateutil==2.8.1
 pytz==2020.1
 setuptools==50.3.0
 six==1.15.0
-Unidecode==1.1.1
+Unidecode==1.2.0
 wheel==0.35.1
