@@ -28,8 +28,8 @@ TRANSLATION_FEED_ATOM = None
 TRANSLATION_FEED_RSS = None
 
 TIMEZONE = 'Europe/Paris'
-DEFAULT_LANG = u'en_US'
-LOCALE = 'en_US'
+DEFAULT_LANG = u'en_US.UTF-8'
+LOCALE = 'en_US.UTF-8'
 
 # Blogroll
 LINKS = ()
@@ -56,6 +56,4 @@ THEME = "/home/freddy/src/homepage/fb-mnmlist"
 #PIWIK_SITE_ID = 1
 
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ["yuicompressor"]
-YUICOMPRESSOR_EXECUTABLE = 'yui-compressor'
 
