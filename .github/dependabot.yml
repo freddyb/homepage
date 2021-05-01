@@ -1,0 +1,31 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: monthly
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: pygments
+    versions:
+    - 2.7.3
+    - 2.7.4
+  - dependency-name: setuptools
+    versions:
+    - 51.1.1
+    - 52.0.0
+  - dependency-name: pip
+    versions:
+    - 20.3.3
+  - dependency-name: pytz
+    versions:
+    - "2020.5"
+  - dependency-name: pelican
+    versions:
+    - 4.5.3
+  - dependency-name: unidecode
+    versions:
+    - 1.1.2
+  - dependency-name: markdown
+    versions:
+    - 3.3.3
