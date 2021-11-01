@@ -4,7 +4,7 @@ feedgenerator==1.9.2
 Jinja2==3.0.1
 Markdown==3.3.4
 MarkupSafe==2.0.1
-pelican==4.6.0
+pelican==4.7.1
 pip==21.2.4
 pkg-resources==0.0.0
 Pygments==2.10.0
