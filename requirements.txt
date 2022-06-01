@@ -2,7 +2,7 @@ blinker==1.4
 docutils==0.18.1
 feedgenerator==2.0.0
 Jinja2==3.0.3
-Markdown==3.3.6
+Markdown==3.3.7
 MarkupSafe==2.1.0
 pelican==4.7.2
 pip==22.0.3
