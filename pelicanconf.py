@@ -50,7 +50,7 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME = "/home/freddy/src/homepage/fb-mnmlist"
+THEME = "fb-mnmlist"
 
 #PIWIK_URL = "piwik-qxawkjrxp.rhcloud.com"
 #PIWIK_SITE_ID = 1
