@@ -5,7 +5,7 @@ save_as: index.html
 Hi,
 
 my name is <strong class="noboldstrong">Frederik Braun</strong> and I currently work as a Staff Security Engineer at
-Mozilla. This blog's content is heavily influenced by my work in security,
+Mozilla in Berlin. This blog's content is heavily influenced by my work in security,
 but it is a personal blog and opinions do not reflect anyone else's than mine.
 
 If you are using a CDN to serve your website's JavaScript files, you might
