@@ -36,7 +36,7 @@ LINKS = ()
 
 
 # images not used, but in here by default, so why not *shrugs*
-STATIC_PATHS = ['images', 'publications', 'publications/thesis', 'js']
+STATIC_PATHS = ['images', 'publications', 'publications/thesis']
 
 # Main Menu
 #MENUITEMS = (("Blog", SITEURL), ("About", SITEURL + "/about"))

@@ -21,7 +21,7 @@ DELETE_OUTPUT_DIRECTORY = True
 
 LOCALE = 'en_US'
 
-STATIC_PATHS = ['images', 'publications', 'publications/thesis', 'js']
+STATIC_PATHS = ['images', 'publications', 'publications/thesis']
 
 
 # Following items are often useful when publishing
