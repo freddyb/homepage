@@ -5,7 +5,7 @@ tags: websecguide
 
 In order to fully discuss security issues, their common root causes and useful prevention or mitigation techniques, you will need some common ground on the security model of the web. This, in turn, relies on various terms and techniques that will be presented in the next sections.
 
-Feel free to skip ahead, if you are familiar with the following concepts.
+Feel free to skip ahead, if you are familiar with some of the following concepts.
 
 ## The Same-Origin Policy
 
@@ -57,7 +57,7 @@ The idea of a *Site* is used in a variety of specs that want to allow related we
 <b>Historical context</b>:
 
 Previously, people used the terminology of a <em>top-level domain</em>, where the <em>top</em> was presumed to be exactly one level of nesting and not more. This has been long-since incorrect and impractical - given the existance of "top" levels with additional nesting like <code>co.uk</code>. Therefore, a variety of other terms for have emerged, like <em>eTLD+1</em> (effective top-level domain plus another level of nesting). Web standards have converged on <em>registerable domain</em>.<br>
-Unfortunately, this means that what is and is not considered a "top" level has to be defined otherwise. In practice, this is now a manually maintained text file otherwise known as the <em><a href="https://publicsuffix.org/)">Public Suffix List</a>.
+Unfortunately, this means that what is and is not considered a "top" level has to be defined otherwise. In practice, this is now a manually maintained text file otherwise known as the <em><a href="https://publicsuffix.org/)">Public Suffix List</a></em>.
 <br><br>
 Previously previously, people used to refer to a site by just taking the <em>registerable domain</em>, without the scheme. This has been renamed to <em>schemelessly same-site</em>. Let's pretend that never happened in the first place.
 </blockquote>
