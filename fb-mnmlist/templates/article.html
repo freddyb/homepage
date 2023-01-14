@@ -15,17 +15,15 @@
 {% if articles|length > 1 %}
 <section id="article-list">
 <h4>All posts</h4>
-  <ol>
+<ol>
 {% endif %}
 {% for article in articles %}
-    <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
-      <em>({{ article.locale_date }})</em>
-    </li>
-
-
+  <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+    <em>({{ article.locale_date }})</em>
+  </li>
 {% endfor %}            
 {% if articles|length > 1 %}
-  </ol>
+</ol>
 </section>
 {% endif %}
 {% endblock %}

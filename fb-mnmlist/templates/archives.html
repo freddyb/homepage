@@ -4,10 +4,10 @@
 <h1>Articles</h1>
 <ul>
 {% for article in dates %}
-    <li>
+  <li>
     <a href='{{ SITEURL }}/{{ article.url }}'>{{ article.title }}</a>
     <em>({{ article.locale_date }})</em>
-    </li>
+  </li>
 {% endfor %}
 </ul>
 </section>
