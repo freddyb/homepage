@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
 {% block content %}        
-<header>
-    <h1>{{ page.title }}</h1>
-</header>
 <article>    
-    {{ page.content }}
+{% if not page.save_as == "index.html" %}
+  <header>
+    <h1>{{ page.title }}</h1>
+  </header>
+{% endif %}
+  {{ page.content }}
 </article>
 {% endblock %}
