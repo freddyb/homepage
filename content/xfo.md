@@ -2,6 +2,8 @@ Title: On the X-Frame-Options Security Header
 Date: 2013-12-12
 Slug: x-frame-options-security-header
 Author: Frederik
+tags: websecguide
+
 
 This blog post *about X-Frame-Options* was originally published on the [Mozilla Security Blog](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)
 

@@ -2,6 +2,7 @@ Title: Chrome switching the XSSAuditor to filter mode re-enables old attack
 Date: 2019-05-10
 Author: Frederik
 Slug: xssauditor-bad 
+tags: websecguide
 
 *Update: In July 2019, [Chrome developers announced that they are going
 to remove XSSAuditor](https://groups.google.com/a/chromium.org/forum/#!searchin/blink-dev/xssauditor|sort:date/blink-dev/TuYw-EZhO9g/5xHgUfaBAwAJ).

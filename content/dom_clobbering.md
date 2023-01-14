@@ -1,6 +1,7 @@
 Title: DOM Clobbering
 Author: Frederik Braun
 Date: 2022-12-12
+tags: websecguide
 
 *This article [first appeared on the HTMLHell Advent Calendar 2022](https://www.htmhell.dev/adventcalendar/2022/12/).*
 

@@ -2,6 +2,8 @@ Title: Neue Methoden für Cross-Origin Isolation: Resource, Opener & Embedding P
 Date: 2022-11-10
 Author: Frederik
 Slug: neue_methoden_cross_origin_isolation
+tags: websecguide
+
 
 *This document sat in my archives.
 I originally created this so I have notes for my

@@ -2,6 +2,8 @@ Title: Subresource Integrity
 Date: 2014-10-05
 Slug: subresource-integrity
 Author: Frederik
+tags: websecguide
+
 
 **This article has been superseded by a [more-recent write-up](https://frederik-braun.com/using-subresource-integrity.html) of my presentation from OWASP AppSec EU 2015. Alternatively, you can [download the slides](https://people.mozilla.org/~fbraun/files/sri-appseceu2015.pdf) or [watch the video on YouTube](https://www.youtube.com/watch?v=JOcpIF047xs)**
 
