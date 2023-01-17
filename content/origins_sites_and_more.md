@@ -40,7 +40,7 @@ Interestingly, this already allow for some tricks and attacks where a cross-orig
 
 Websites that perform HTTP requests will *not* be able to read the responses, unless the request's URL is same-origin.
 
-These are typically sent with APIs like like `XMLHttpRequest` and `fetch()`.
+These are typically sent with APIs like `XMLHttpRequest` and `fetch()`.
 
 However, there are some exceptions and techniques towards relaxing same-origin checks through techniques like *Cross Origin Resource Sharing* (CORS). Many of these exceptions grew organically based on some specific need. We will go through them in a later post.
 <!-- TODO: task: add ref-->
@@ -59,7 +59,7 @@ The idea of a *Site* is used in a variety of specs that want to allow related we
 Previously, people used the terminology of a <em>top-level domain</em>, where the <em>top</em> was presumed to be exactly one level of nesting and not more. This has been long-since incorrect and impractical - given the existence of "top" levels with additional nesting like <code>co.uk</code>. Therefore, a variety of other terms for have emerged, like <em>eTLD+1</em> (effective top-level domain plus another level of nesting). Web standards have converged on <em>registerable domain</em>.<br>
 Unfortunately, this means that what is and is not considered a "top" level has to be defined otherwise. In practice, this is now a manually maintained text file otherwise known as the <em><a href="https://publicsuffix.org/">Public Suffix List</a></em>.
 <br><br>
-Previously previously, people used to refer to a site by just taking the <em>registerable domain</em>, without the scheme. This has been renamed to <em>schemelessly same-site</em>. Let's pretend that never happened in the first place.
+Even before that, people used to refer to same-site by just comparing the <em>registerable domain</em>, without the scheme. This has been renamed to <em>schemelessly same-site</em>. Let's pretend that never happened in the first place.
 </blockquote>
 
 Getting a domain of yours added to the aforementioned Public Suffix List, allows to enforce privilege separation along the lines of the Same-Origin Policy: If your domain is considered a public suffix (`github.io` is a great example), then every name below that becomes its own origin. It is generally recommended to do that in order to assign user-generated content into separated namespaces.
