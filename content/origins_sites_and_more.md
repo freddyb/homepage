@@ -17,7 +17,7 @@ documents' URLs should have the same scheme, host and port.
 
 However, an origin can also be a so-called an *opaque origin*, which is considered a restricted-context that is always *cross-origin* to everything else. This is used in e.g., `<iframe>` elements with the `sandbox` attribute.
 
-Cross-origin resources which can be loaded into the current document (e.g., scripts, images) can be *used* (e.g., executed or displayed) but not properly read: A cross-origin image can be drawn onto a `<canvas>`, but it's pixels can not be read. A cross-origin's script can be executed but the actual source text is unreadable.
+Cross-origin resources which can be loaded into the current document (e.g., scripts, images) can be *used* (e.g., executed or displayed) but not properly read: A cross-origin image can be drawn onto a `<canvas>`, but its pixels can not be read. A cross-origin's script can be executed but the actual source text is unreadable.
 
 The Same-Origin Policy can not always apply purely based on comparing the origins of two URLs, as we will likely see in another post. For now, a quick link to my 2012 diploma thesis *["Origin Policy Enforcement in Modern Browsers"](https://frederik-braun.com/publications/thesis/Thesis-Origin_Policy_Enforcement_in_Modern_Browsers.pdf)* will have to suffice.
 
@@ -56,8 +56,8 @@ The idea of a *Site* is used in a variety of specs that want to allow related we
 <blockquote>
 <b>Historical context</b>:
 
-Previously, people used the terminology of a <em>top-level domain</em>, where the <em>top</em> was presumed to be exactly one level of nesting and not more. This has been long-since incorrect and impractical - given the existance of "top" levels with additional nesting like <code>co.uk</code>. Therefore, a variety of other terms for have emerged, like <em>eTLD+1</em> (effective top-level domain plus another level of nesting). Web standards have converged on <em>registerable domain</em>.<br>
-Unfortunately, this means that what is and is not considered a "top" level has to be defined otherwise. In practice, this is now a manually maintained text file otherwise known as the <em><a href="https://publicsuffix.org/)">Public Suffix List</a></em>.
+Previously, people used the terminology of a <em>top-level domain</em>, where the <em>top</em> was presumed to be exactly one level of nesting and not more. This has been long-since incorrect and impractical - given the existence of "top" levels with additional nesting like <code>co.uk</code>. Therefore, a variety of other terms for have emerged, like <em>eTLD+1</em> (effective top-level domain plus another level of nesting). Web standards have converged on <em>registerable domain</em>.<br>
+Unfortunately, this means that what is and is not considered a "top" level has to be defined otherwise. In practice, this is now a manually maintained text file otherwise known as the <em><a href="https://publicsuffix.org/">Public Suffix List</a></em>.
 <br><br>
 Previously previously, people used to refer to a site by just taking the <em>registerable domain</em>, without the scheme. This has been renamed to <em>schemelessly same-site</em>. Let's pretend that never happened in the first place.
 </blockquote>
@@ -88,7 +88,7 @@ In order to reenable access to these coveted APIs, a website now has to ensure t
 
 When used in combination, COEP and COOP lead to the `window.crossOriginIsolated` property becoming `true`. This give access to the `SharedArrayBuffer` constructor and high-precision timing in the Performance API.
 
-To summarize, *Cross-Origin Isolation* and is a mechanism to retrofit the web  security model in light of new attacks: A web site can only get access by being assigned its very own, unique browser process that is also free of potentially sensitive cross-origin content.
+To summarize, *Cross-Origin Isolation* and is a mechanism to retrofit the web  security model in light of new attacks: A website can only get access by being assigned its very own, unique browser process that is also free of potentially sensitive cross-origin content.
 
 ## What else?
 Do you feel like something is unclear or missing?
