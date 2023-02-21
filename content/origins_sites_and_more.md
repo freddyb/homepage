@@ -15,9 +15,9 @@ Generally, documents can only interact with each other when hosted
 on the same origin. In essence, this means that two communicating
 documents' URLs should have the same scheme, host and port.
 
-However, an origin can also be a so-called an *opaque origin*, which is considered a restricted-context that is always *cross-origin* to everything else. This is used in e.g., `<iframe>` elements with the `sandbox` attribute.
+However, an origin can also be a so-called an *opaque origin*, which is considered a restricted context that is always *cross-origin* to everything else. This is used in e.g., `<iframe>` elements with the `sandbox` attribute.
 
-Cross-origin resources which can be loaded into the current document (e.g., scripts, images) can be *used* (e.g., executed or displayed) but not properly read: A cross-origin image can be drawn onto a `<canvas>`, but its pixels can not be read. A cross-origin's script can be executed but the actual source text is unreadable.
+Cross-origin resources that are loaded into the current document (e.g., scripts, images) can be *used* (e.g., executed or displayed) but not properly read: A cross-origin image can be drawn onto a `<canvas>`, but its pixels can not be read. A cross-origin's script can be executed but the actual source text is unreadable. However, the script's side effects are observable when modifying the global scope (e.g., defining a new global variable). This can lead to unintended leaks, called Cross-Site Script Inclusions. <!-- TODO: task: add ref -->
 
 The Same-Origin Policy can not always apply purely based on comparing the origins of two URLs, as we will likely see in another post. For now, a quick link to my 2012 diploma thesis *["Origin Policy Enforcement in Modern Browsers"](https://frederik-braun.com/publications/thesis/Thesis-Origin_Policy_Enforcement_in_Modern_Browsers.pdf)* will have to suffice.
 
@@ -30,47 +30,44 @@ Synchronous access in JavaScript across origin boundaries can happen through a `
 1. Reading the `window.length` property, which reveals the number of frames.
 2. Reading `closed` attribute (used for popups) and calling `close()`.
 3. Invoking `focus()` and `blur()`.
-4. Calling `postMessage` allows sending data, which triggers a `MessageEvent` on the receiving window.
+4. Calling `postMessage` allows sending data, which triggers a `MessageEvent` on the receiving window asynchronously.
 5. A cross-origin window *can* be navigated away by assigning to `window.location` or invoking `location.replace()`.
 
-
-Interestingly, this already allow for some tricks and attacks where a cross-origin window is suddenly replaced with a similar-looking spoof.
+Interestingly, this already allows for some tricks and attacks where a cross-origin window is suddenly replaced with a similar-looking spoof.
 
 ### 2) HTTP Requests
 
-Websites that perform HTTP requests will *not* be able to read the responses, unless the request's URL is same-origin.
+Websites can perform HTTP requests, but will *not* be able to read the responses, unless the request's URL is same-origin. Requests are typically issued with APIs like `XMLHttpRequest` and `fetch()`.
 
-These are typically sent with APIs like `XMLHttpRequest` and `fetch()`.
-
-However, there are some exceptions and techniques towards relaxing same-origin checks through techniques like *Cross Origin Resource Sharing* (CORS). Many of these exceptions grew organically based on some specific need. We will go through them in a later post.
+However, there are some exceptions and techniques towards relaxing same-origin checks, like *Cross Origin Resource Sharing* (CORS). Many of these exceptions grew organically based on some specific need. We will go through them in a later post.
 <!-- TODO: task: add ref-->
 
 ## Site, Registerable Domain and Public Suffix
 
 Some APIs are governed by the notion of a *Site*, instead of an *Origin*. A *Site* is a combination of a scheme and a host's *registerable domain*.
 
-Looking up the *registerable domain* of a hostname, is a quite literally a check which domain had to be registered (e.g., `example.co.uk` or is the registerable domain for `www.example.co.uk` as well as for `mail.example.co.uk`). This lookup is effectively, a way to include a host and all of its subdomains, but nothing above.
+Looking up the *registerable domain* of a hostname, is a quite literally a check which domain had to be registered (e.g., `example.co.uk` or is the registerable domain for `www.example.co.uk` as well as for `mail.example.co.uk`). This lookup is useful to include an entity and all of its subdomains, but nothing above.
 
-The idea of a *Site* is used in a variety of specs that want to allow related web pages to collude with each other for convenience or legacy support reasons. Among them are Storage Access API (3rd Party Cookie Access), WebAuthn and Federated Credential Management.
+The idea of a *Site* is used in a variety of specs that want to allow related web pages to collaborate for convenience or legacy support reasons. Among them are Storage Access API (3rd Party Cookie Access), WebAuthn and Federated Credential Management.
 
 <blockquote>
 <b>Historical context</b>:
 
-Previously, people used the terminology of a <em>top-level domain</em>, where the <em>top</em> was presumed to be exactly one level of nesting and not more. This has been long-since incorrect and impractical - given the existence of "top" levels with additional nesting like <code>co.uk</code>. Therefore, a variety of other terms for have emerged, like <em>eTLD+1</em> (effective top-level domain plus another level of nesting). Web standards have converged on <em>registerable domain</em>.<br>
-Unfortunately, this means that what is and is not considered a "top" level has to be defined otherwise. In practice, this is now a manually maintained text file otherwise known as the <em><a href="https://publicsuffix.org/">Public Suffix List</a></em>.
+Previously, people used the terminology of a <em>top-level domain</em>, where the <em>top</em> was presumed to be exactly one level of nesting and not more. This has been long-since incorrect and impractical - given the existence of "top" levels with additional nesting like <code>co.uk</code>. Therefore, a variety of other terms have emerged, like <em>eTLD+1</em> (the effective top-level domain, plus another level of nesting). Web standards have converged on <em>registerable domain</em>.<br>
+What this means is that the boundary where a "top" level begins has to be defined otherwise: In practice, this happens in a manually maintained text file otherwise known as the <em><a href="https://publicsuffix.org/">Public Suffix List</a></em>.
 <br><br>
-Even before that, people used to refer to same-site by just comparing the <em>registerable domain</em>, without the scheme. This has been renamed to <em>schemelessly same-site</em>. Let's pretend that never happened in the first place.
+Aside: Even before that, people used to refer to same-site by just comparing two <em>registerable domains</em>, without the scheme. This has been renamed to <em>schemelessly same-site</em>. Let's pretend that never happened in the first place.
 </blockquote>
 
-Getting a domain of yours added to the aforementioned Public Suffix List, allows to enforce privilege separation along the lines of the Same-Origin Policy: If your domain is considered a public suffix (`github.io` is a great example), then every name below that becomes its own origin. It is generally recommended to do that in order to assign user-generated content into separated namespaces.
+Getting a domain of yours added to the aforementioned Public Suffix List, allows to enforce privilege separation along the lines of the Same-Origin Policy: If your domain is considered a public suffix, then every name below that becomes its own origin. It is generally recommended to do that in order to assign user-generated content into separated namespaces. A great example is `github.io`, where each user is getting a namespace underneath the public suffix and can therefore not affect cookies or site-specific settings with other users.
 
 ## Secure Contexts
 
-*Secure Context* is a generalized notion of whether a website was served over HTTPS. The generalization is necessary to allow for situations where a document does not have a HTTP(S) URL but is inheriting its context (`<iframe srcdoc>`, `about:blank` documents). Additionally, pages hosted on `*.localhost` or via the local filesystem (`file://`) are also considered secure. Whether the current page was delivered securely is exposed in JavaScript via the `window.isSecureContext` property.
+*Secure Context* is a generalized notion of whether a website was served over HTTPS. A simple look at the protocol scheme does not fully work and the generalization is necessary to allow for situations where a document does not have a HTTP(S) URL but is inheriting its context (e.g., `<iframe srcdoc>`, `about:blank` documents). Additionally, pages hosted on `*.localhost` or via the local filesystem (`file://`) are also considered secure. Whether the current page was delivered securely is exposed in JavaScript via the `window.isSecureContext` property.
 
-Being in a Secure Context is often times required for newer, powerful APIs which want some level of assurance that a web page has not been intercepted or modified by a network attacker. A typical API that requires it is ServiceWorkers, because persistently installed background code should not be perpetuated into future sessions when coming an insecure connection.
+Being in a Secure Context is often times required for newer, powerful APIs which want some level of assurance that a web page has not been intercepted or modified by a network attacker. A typical API that requires it is ServiceWorkers, because persistently installed background code should not be perpetuated into future sessions when coming from an insecure connection.
 
-**Note:** A document delivered over HTTPS is **not** a secure context, if it has been embedded (e.g. via `<iframe>`) from an insecure context.
+**Note:** A document delivered over HTTPS is **not** a secure context, if it has been embedded from an insecure context (e.g. HTTP site contains `<iframe>` of HTTPS site).
 
 ## Cross-Origin Isolation
 
