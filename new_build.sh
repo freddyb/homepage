@@ -5,4 +5,6 @@ source venv/bin/activate
 make html
 make publish
 
-rsync -v -r output/* fbcom@kushida.uberspace.de:web/frederik-braun.com/
+echo
+echo Rsync
+rsync --info=progress2 -r output/* fbcom@kushida.uberspace.de:web/frederik-braun.com/
