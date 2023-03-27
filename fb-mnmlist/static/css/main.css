@@ -109,7 +109,7 @@ nav[role="custom-dropdown"] > label {
 }
 
 @media screen and (max-width: 768px) {
-  hr {
+  hr.tophr {
     display: none;
   }
 

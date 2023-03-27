@@ -11,17 +11,19 @@
     {{ article.content }}
 </article>
 
+<hr>
+
 <section id="minicontact">
 <em>
-Please comment on <a href="https://social.security.plumbing/@freddy">Mastodon</a>.
-If you find a mistake, you can <a href="https://github.com/freddyb/homepage/edit/main/content/{{ article.relative_source_path}}">submit a pull request on GitHub.</a>.
+<!-- Please comment on <a href="https://social.security.plumbing/@freddy">Mastodon</a>. -->
+If you find a mistake in this article, you can <a href="https://github.com/freddyb/homepage/edit/main/content/{{ article.relative_source_path}}">submit a pull request on GitHub</a>.
 </em>
 </section>
 
 {# List Articles #}
 {% if articles|length > 1 %}
 <section id="article-list">
-<h4>All posts</h4>
+<h4>Other posts</h4>
 <ol>
 {% endif %}
 {% for article in articles %}
