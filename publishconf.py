@@ -19,7 +19,7 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
-LOCALE = 'en_US'
+LOCALE = 'en_US.UTF-8'
 
 STATIC_PATHS = ['images', 'publications', 'publications/thesis']
 
