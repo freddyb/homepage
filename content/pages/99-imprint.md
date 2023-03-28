@@ -136,11 +136,10 @@ SZiQfzssUWC++Hy3ghwerjXFUG5ONWiwSFtOIUEQvnB6rcZipsGQ3tPQ5ROlmcAmsnQAbSbL0RK2
 </details>
 
 ## Social
-* <a href="https://mobile.twitter.com/freddyb">freddyb on Twitter</a>
-* <a href="https://github.com/freddyb">freddyb on GitHub</a>
-* <a href="https://github.com/mozfreddyb">mozfreddyb on GitHub</a>
-* <a href="https://keybase.io/freddyb">freddyb on keybase</a>.
-
+* [freddy@security.plumbing](https://social.security.plumbing/@freddy) on Mastodon
+* <a href="https://mobile.twitter.com/freddyb">freddyb</a> on Twitter
+* <a href="https://github.com/freddyb">freddyb</a> on GitHub
+* <a href="https://github.com/mozfreddyb">mozfreddyb</a> on GitHub
 
 <script>window.addEventListener("load",function(){var c=document.querySelectorAll(".emailaddr");for(var f=0;f<c.length;f++){var b=c[f];var a=b.dataset.crypt;var d="";for(i=0;i<a.length;i++){d+=String.fromCharCode(a.charCodeAt(i)^7)}b.innerHTML="<a href='mailto:"+d+"'>"+d+"</a>"}});</script>
 
