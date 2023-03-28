@@ -2,7 +2,7 @@
 export LANG=en_US.UTF-8
 source venv/bin/activate
 
-make html
+#make html
 make publish
 
 echo
