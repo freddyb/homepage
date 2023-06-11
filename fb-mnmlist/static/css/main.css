@@ -14,11 +14,13 @@ pre {
   white-space: pre-wrap;
 }
 
-a,
-a:active,
-a:visited {
+a, a:active, a:visited {
   color: #1f54a6;
   text-decoration: none;
+}
+article a, a:active, a:visited {
+  color: #1f54a6;
+  text-decoration: underline;
 }
 
 hr {

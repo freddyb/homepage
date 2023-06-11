@@ -4,7 +4,8 @@ save_as: index.html
 
 Hi,
 
-my name is <strong class="noboldstrong">Frederik Braun</strong> and I'm a
+my name is <strong class="noboldstrong"><a rel="me"
+href="https://social.security.plumbing/@freddy">Frederik Braun</a></strong> and I'm a
 security engineer and manager working on the Mozilla Firefox web browser. My
 work on Firefox involves various topics ranging from security, web standards,
 static analysis, bug bounty, and public speaking. Some of my major projects
@@ -35,5 +36,4 @@ studies of IT-Security at the [Ruhr University](https://www.rub.de/) in Bochum.
 This is also where I co-founded the CTF team
 [fluxfingers](https://fluxfingers.net).
 
-Please proceed to my [blog posts](archives.html) to read more<a rel="me"
-href="https://social.security.plumbing/@freddy">.</a>
+Please proceed to my [blog posts](archives.html) to read more.
