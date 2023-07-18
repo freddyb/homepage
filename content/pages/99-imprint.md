@@ -7,6 +7,7 @@ Date: 2016-02-26
 ## E-Mail
 #### <span class='emailaddr' data-crypt="aeGaubcbunl*eufri)dhj">fb@(this domain)</span>
 
+<!--
 
 <details><summary>
 <code>BA67 3ED1 0CCA 8A5C 103A  06CB 6F12 D476 ED71 3760</code>
@@ -66,12 +67,12 @@ UZMmnvpBJy6b1x2tHYqa3fWEqe0faCawhnrXEyyQgthd4cvF1osQ
 ```
 </details>
 
-
-
+--->
 
 #### <span class='emailaddr' data-crypt="aeufriGjh}nkkf)dhj">fbraun@(mozilla-dot-com)</span>
 
-<details><summary>
+<!--
+ <details><summary>
 <code>00D6 1AB9 F074 783B 57F2 A708 B07E A0BA F194 3869</code>
 </summary>
 ```
@@ -134,6 +135,8 @@ SZiQfzssUWC++Hy3ghwerjXFUG5ONWiwSFtOIUEQvnB6rcZipsGQ3tPQ5ROlmcAmsnQAbSbL0RK2
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 </details>
+
+-->
 
 ## Social
 * [freddy@security.plumbing](https://social.security.plumbing/@freddy) on Mastodon
