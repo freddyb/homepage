@@ -1,4 +1,4 @@
-Title: Finding the SqueezeBox Radio Default SSH Passwort
+Title: Finding the SqueezeBox Radio Default SSH Password
 Date: 2016-09-02
 Author: Frederik
 Slug: squeezebox-radio-ssh-default-password
