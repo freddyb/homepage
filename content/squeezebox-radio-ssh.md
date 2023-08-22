@@ -3,13 +3,19 @@ Date: 2016-09-02
 Author: Frederik
 Slug: squeezebox-radio-ssh-default-password
 
-***Note:*** *This post was originally hosted somewhere else. Republishing here for better visibility.
-Also, the slimdevices wiki has a section on SSH authentication that [mentions the default password](http://wiki.slimdevices.com/index.php/Squeezebox_SSH_public_key_authentication). I must have missed it.*
+## TLDR:
+If SSH is enabled in the advanced settings, you can just login with the default password **1234**.
 
+Given the age of the installed SSH daemon, you will likely have to enable legacy cryptography like so:
+```
+ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes256-cbc -oHostKeyAlgorithms=+ssh-dss  -l root <ip address>
+```
+
+Read on if you want to find out how I managed to *crack* the password, because I did not find the [existing documentation on Squeezebox SSH access](http://wiki.slimdevices.com/index.php/Squeezebox_SSH_public_key_authentication).
 
 ## Prelude
-I have a SqueezeBox Radio at home. It does a nice job of playing music from the internet and my local network.
-The radio is clearly a linux device and it even listens on por 22. But I don't have the password and this always bummed me.
+I have a SqueezeBox Radio at home. It does a nice job of playing music from the internet and from my local network.
+The radio is clearly a linux device and it even listens on port 22. But I don't have the password and this always bummed me.
 I can stream music to the radio from my local network using the logitech media server software.
 When migrating server hardware, I looked around what to keep and noticed an `updates` folder in `/var/lib/squeezeboxserver`.
 It turns out, that when the radio asks for updates, the local server is in charge of getting the update file and providing it
@@ -57,7 +63,7 @@ Unable to negotiate with 192.168.x.y port 22: no matching key exchange method fo
 ```
 A quick search shows that we can re-enable the legacy crypto:
 ```
-$ ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 192.168.x.y -l root
+$ ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes256-cbc -oHostKeyAlgorithms=+ssh-dss -l root <ip address>
 root@192.168.x.y's password:
 
 This network device is for authorized use only. Unauthorized or improper use
@@ -71,3 +77,5 @@ modifications and revert to the installed firmware.
 
 Enjoy!
 ```
+
+And that's it. Have fun with your full root privileges!
