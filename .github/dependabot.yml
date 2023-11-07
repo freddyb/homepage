@@ -9,7 +9,6 @@ updates:
     pelican-dependencies:
       patterns:
       - '*'
-      dependency-types: "development"
       update-types:
       - "minor"
       - "patch"
