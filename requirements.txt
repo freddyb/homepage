@@ -1,4 +1,4 @@
-blinker==1.5
+blinker==1.7.0
 docutils==0.19
 feedgenerator==2.0.0
 Jinja2==3.1.2
