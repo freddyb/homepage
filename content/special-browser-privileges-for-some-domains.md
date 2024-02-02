@@ -24,7 +24,7 @@ our permission system for quite a while already, so I knew what to do.
 
 First of all, Firefox uses a so-called PermissionManager API, which gets
 its default values from the file
-[browser/app/permissions#19](https://searchfox.org/mozilla-central/rev/14dc8f0e748d44778a02ffcf9ebcda3851b2bf9e/browser/app/permissions)
+[browser/app/permissions](https://searchfox.org/mozilla-central/rev/14dc8f0e748d44778a02ffcf9ebcda3851b2bf9e/browser/app/permissions)
 in the source tree. At the time of writing this article, the four different
 possible permissions are `uitour`, `install`, `remote-troubleshooting` and
  `autoplay-media`. So far, I have only looked into the first two, as I know
@@ -100,6 +100,6 @@ We prefer bugs to be filed directly through bugzilla, which requires you to
 register. The bounty form is at
 [https://bugzilla.mozilla.org/form.client.bounty](https://bugzilla.mozilla.org/form.client.bounty).
 
-Lastly, you can send an email to
+Lastly, you should send an email to
 [security@mozilla.org](mailto:security@mozilla.org) if you report something
-out side of typical working hours (we're humans too!).
+out side of typical working hours (we're humans too! :-)).
