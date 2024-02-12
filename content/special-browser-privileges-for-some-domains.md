@@ -96,10 +96,3 @@ Here are some links to our code:
 
 If you feel like you have found something that I did not, please submit to the
 [Firefox bug bounty program](https://www.mozilla.org/en-US/security/client-bug-bounty/).
-We prefer bugs to be filed directly through bugzilla, which requires you to
-register. The bounty form is at
-[https://bugzilla.mozilla.org/form.client.bounty](https://bugzilla.mozilla.org/form.client.bounty).
-
-Lastly, you should send an email to
-[security@mozilla.org](mailto:security@mozilla.org) if you report something
-out side of typical working hours (we're humans too! :-)).
