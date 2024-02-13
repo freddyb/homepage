@@ -53,7 +53,7 @@ the `uitour` events can highlight Firefox menu buttons or open popups that
 contain new funcionality.
 
 A specific example that I remember is that for example, when a Firefox user
-tries to download a new Firefox user, we assume that they are confused or
+tries to download a new Firefox package, we assume that they are confused or
 dissatisfied with how their browser is setup right now. So instead of
 offering a download file, we also suggest "refreshing" Firefox, which can
 help undo some undesired customizations without losing stored passwords
