@@ -5,7 +5,13 @@
     --color-border-top: lightgreen;
   }
   h1 { color: lightgreen; }
-  
+
+  /* huge thank-you to Alec for his
+blog post at http://aleclownes.com/2017/02/01/crt-display.html
+all remaining code is his work.
+*/
+
+
   nav::after {
     content: " ";
     display: block;
