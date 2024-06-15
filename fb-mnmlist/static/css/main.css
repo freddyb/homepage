@@ -1,9 +1,14 @@
+:root {
+  --color-text: #fff;
+  --color-bg: #000;
+  --color-link: #1f54a6;
+}
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Roboto", "Noto Sans", "Droid Sans", sans-serif;
   line-height: 1.6;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--color-text);
+  color: var(--color-bg);
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -15,11 +20,11 @@ pre {
 }
 
 a, a:active, a:visited {
-  color: #1f54a6;
+  color: var(--color-link);
   text-decoration: none;
 }
 article a, a:active, a:visited {
-  color: #1f54a6;
+  color: var(--color-link);
   text-decoration: underline;
 }
 
@@ -486,7 +491,7 @@ blockquote {
 
 .site-title,
 .site-title:visited {
-  color: #1f54a6;
+  color: var(--color-link);
 }
 
 .site-nav {
@@ -503,7 +508,7 @@ blockquote {
 }
 
 .site-nav .page-link {
-  color: #1f54a6;
+  color: var(--color-link);
   line-height: 1.5;
 }
 
