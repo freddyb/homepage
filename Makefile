@@ -11,7 +11,7 @@ PUBLISHCONF=$(BASEDIR)/publishconf.py
 SSH_HOST=kushida.uberspace.de
 SSH_PORT=22
 SSH_USER=fbcom
-SSH_TARGET_DIR=web/frederik-braun.com/
+SSH_TARGET_DIR=web/frederikbraun.de/
 
 
 DEBUG ?= 0

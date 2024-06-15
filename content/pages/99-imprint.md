@@ -5,7 +5,9 @@ Date: 2016-02-26
 
 
 ## E-Mail
-#### <span class='emailaddr' data-crypt="aeGaubcbunl*eufri)dhj">fb@(this domain)</span>
+#### <span class='emailaddr' data-crypt="jfnkGaubcbunleufri)cb">mail@(this domain)</span> (new!)
+#### <span class='emailaddr' data-crypt="aeGaubcbunl*eufri)dhj">fb@firstname-lastname.com</span> (old)
+
 
 #### <span class='emailaddr' data-crypt="aeufriGjh}nkkf)dhj">fbraun@(mozilla-dot-com)</span>
 

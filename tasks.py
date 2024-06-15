@@ -29,7 +29,7 @@ CONFIG = {
     'ssh_user': 'fbcom',
     'ssh_host': 'kushida.uberspace.de',
     'ssh_port': '22',
-    'ssh_path': 'web/frederik-braun.com/',
+    'ssh_path': 'web/frederikbraun.de/',
     # Host and port for `serve`
     'host': 'localhost',
     'port': 8000,

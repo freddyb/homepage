@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Frederik'
 SITENAME = u"Frederik Braun"
-SITEURL = 'https://frederik-braun.com'
+SITEURL = 'https://frederikbraun.de'
 
 
 RELATIVE_URLS = True ## for testing, shouldnt point to actual domain

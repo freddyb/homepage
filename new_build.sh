@@ -7,4 +7,4 @@ make publish
 
 echo
 echo Rsync
-rsync --info=progress2 -r output/* fbcom@kushida.uberspace.de:web/frederik-braun.com/
+rsync  -r output/* fbcom@kushida.uberspace.de:web/frederikbraun.de/
