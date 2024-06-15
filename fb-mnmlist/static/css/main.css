@@ -2,6 +2,7 @@
   --color-text: #fff;
   --color-bg: #000;
   --color-link: #1f54a6;
+  --color-border-top: #284877;
 }
 body {
   margin: 0;
@@ -475,7 +476,7 @@ blockquote {
 }
 
 .site-header {
-  border-top: 5px solid #284877;
+  border-top: 5px solid var(--color-border-top);
   border-bottom: 1px solid #f1f5fa;
   min-height: 55.95px;
   position: relative;
@@ -573,4 +574,10 @@ blockquote {
 
 details > summary > code {
   font-size: small;
+}
+
+#pi {
+  display: flex; align-content:end; justify-content: end; color: white; text-shadow: 1px 1px black;
+  cursor: default;
+
 }
