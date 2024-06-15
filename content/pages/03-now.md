@@ -1,27 +1,26 @@
 Title: Now
 Slug: now
 
-*Last Updated: July 2023*
+*Last Updated: June 2024*
 
 Here's a list of thigs that currently occupy my thoughts.
 
 ### Life
 
-- looking forward to the summer and spending more time with my kids.
-- canoeing
-- cccamp23
-- trying to blog more about web security.
+- looking forward to my girl's first day of school
+- riding my bike all summer long
+- meeting my team IRL in Dublin
+- trying to blog more about web security
 
 ### Work
 
-- helping a great team succeed.
-- securing Firefox.
-- [removing HTTP as a default](https://support.mozilla.org/en-US/kb/https-only-prefs): lots of tiny improvements for HTPS-Only Mode in Firefox
+- [shipping way, way more HTTPS](https://blog.mozilla.org/security/2024/06/05/firefox-will-upgrade-more-mixed-content-in-version-127/)
 - [killing XSS](https://wicg.github.io/sanitizer-api/)
+- preventing, finding, removing security bugs
+- and generally squaring all the circles
 
 ### Reading
 
-- *Managing Humans* by Michael Lopp.
-- <s>*Crossroads* by Jonathan Franzen.</s>
+- *The Manager's Path* by Camille Fournier.
 
 Inspired by [Derek Sivers' "now" page](https://sive.rs/now).
