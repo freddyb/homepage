@@ -4,11 +4,11 @@ Author: Frederik
 Slug: new-domain
 
 Welcome! If you're reading this, you might've notice that my blog and this post is
-on my new domain [frederikbraun.de](#).
+on my new domain name [frederikbraun.de](#).
 
 And this is the story. The story of a young nerd in the 1990s. The story of
 my aunt, who went to the Miniatur Wunderland, left the tourist attraction,
-got past the secretary, and asked the owner if he still needs his domain.
+got past the secretary, and asked the owner if he still needs his domain name.
 
 # Many years ago
 
@@ -20,19 +20,19 @@ a long ethernet cable from the phone connection to the PC and through the whole
 flat. This ~20m cable was a solid tripping hazard
 and also, more importantly, well protected by my older brother.
 
-Anyway, someday while I was sitting in my brother's room hanging out on IRC and
-learning about computer stuff, I learned about how someone could get their
-own domain and host web pages.
+Anyway, someday as I was sitting in my brother's room hanging out on the IRC and
+learning about computer stuff, I learned about how one could get their
+own domain name and host web pages.
 A very exciting topic back then. (To save my personal reputation, all of my
 teenage home pages will remain unknown.)
 
-The domain I wanted to
+The domain name I wanted to
 register at that time was frederikbraun.de, my real name as a cool
 and nerdy place on the internet that I could use as an email or homepage.
 
 Back in the day, other kids who had an email address were using hotmail, yahoo or gmx.
 It was clear to me that I could really show my extreme technical prowess by
-having my own domain for basic internet stuff. (Remember, this was the 1990s
+having my own domain name for basic internet stuff. (Remember, this was the 1990s
 and I was a teenager. Of course I wanted to "show it to the whole world".)
 
 Anyway, by the time I figured out how to register a domain name, I realized
@@ -47,34 +47,34 @@ tourist attractions in Germany. (Though I have never actually visited).
 
 I then went to look at the DENIC (registry for `.de` names) website and tried
 their [WHOIS](https://en.wikipedia.org/wiki/WHOIS) client to learn more.
-*"He's got the domain, he's using it to promote his business and likely also for
+*"He's got the domain name, he's using it to promote his business and likely also for
 email"*. I was stuck.
 
 For years, I kept on checking the `WHOIS` entry regularly, looking
 for a potential expiration date. But then, at some point, I had to admit
-defeat and get some other domains. (And as it goes with the stereotypical nerd,
-many domains: frederik-braun.com, security.plumbing, 0e.vc, ...).
+defeat and get some other domain names. (And as it goes with the stereotypical nerd,
+many domain names: frederik-braun.com, security.plumbing, 0e.vc, ...).
 
 # Fast forward to the 2020s
 
 At some point last year, I remembered this old story. I remembered that
-it would still be nice to **get my domain**. So, I opened a new
+it would still be nice to **get my domain name**. So, I opened a new
 Firefox tab and tried to open the page.
 
 Huh. Nothing? The page didn't load. Oh wow, I thought. Am I lucky? Did the
-domain expire? Turns out: No. The DNS entries are all wrong, but the domain
-is still registered. At this point, I tried to learn more, but starting 2018,
+domain name expire? Turns out: No. The DNS entries are all wrong, but the domain
+name is still registered. At this point, I tried to learn more, but starting 2018,
 the
 registrar for `.de` [DENIC stopped supplying personal information in WHOIS to
 comply with GDPR](https://www.denic.de/en/service/whois-service/). So, what
 could I do? All I could learn was a broken DNS record and a WHOIS entry with the
-"tech admin" contact for the domain. The admin contact pointed to a small IT
-company in Hamburg, so my guess was that the domain was still owned by the same
+"tech admin" contact for the domain name. The admin contact pointed to a small IT
+company in Hamburg, so my guess was that the domain name was still owned by the same
 Frederik as 20 years ago.
 
 I tried probing the [`MX` records](https://en.wikipedia.org/wiki/MX_record)
-and to my surprise, the domain wasn't even used for email addresses!
-At this point, it became clear that the domain was perpetually renewed by its
+and to my surprise, the domain name wasn't even used for email addresses!
+At this point, it became clear that the domain name was perpetually renewed by its
 owner, yet completely unused. I would just have to reach out..but how?
 
 How do you *personally* reach the owner of Germany's most popular tourist
