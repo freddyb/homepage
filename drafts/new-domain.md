@@ -84,7 +84,7 @@ I don't claim to have any
 [OSINT](https://en.wikipedia.org/wiki/Open-source_intelligence) skills
 but I tried searching around on the net. Lots of boulevard stuff mostly.
 No page about the owners of the Wunderland on their homepage either.
-Then I tried LinkedIn but no luck. They only show you people you're connected with
+Then I tried LinkedIn but no luck. It only show you people you're connected with,
 and then a hope or two. I also tried a free LinkedIn Premium account. Still no luck.
 
 I felt like I was stuck. Again.
