@@ -21,4 +21,4 @@ Date: 2016-02-26
 
 
 <hr>
-<footer><small>Website created with <a href="http://blog.getpelican.com/">Pelican</a>. Theme/Layout based on <a href="http://mathieu.agopian.info/mnmlist/theme.html">Thème mnmlist</a> and <a href="http://justinjackson.ca/words.html">justinjackson.ca/words.html</a>.</small></footer>
+<footer><small>Website created with <a href="http://blog.getpelican.com/">Pelican</a>. Theme/Layout based on <a href="https://github.com/jekyll/minima">Jekyll Minima theme</a>, <a href="http://mathieu.agopian.info/mnmlist/theme.html">Thème mnmlist</a> and <a href="http://justinjackson.ca/words.html">justinjackson.ca/words.html</a>.</small></footer>
