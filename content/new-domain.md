@@ -1,4 +1,4 @@
-Title: How I got a new domain
+Title: How I got a new domain name
 Date: 2024-06-15
 Author: Frederik
 Slug: new-domain
