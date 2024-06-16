@@ -116,3 +116,7 @@ And that's what happened: I sent a polite email sharing my story and a couple
 of weeks later here we are.
 
 My blog is now on [frederikbraun.de](https://frederikbraun.de).
+
+<small>Thanks to <a href="https://nagekar.com/">Abhishek Nagekar</a> for
+reading the draft of this blog post. The remaining mistakes are all mine :)
+</small>
