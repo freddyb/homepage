@@ -107,7 +107,7 @@ owner walked by from the other direction. He wasn't even in his office.
 So my amazing aunt told the story again. The other Frederik heard the story and
 found it very amusing. It's apparently not the first time for him to have found
 a namesake.
-He asked if I am the opera singer by he same name (What?) and told
+He asked if I am the opera singer of the same name (What?) and told
 her the email address I should use to reach out.
 
 # The End
