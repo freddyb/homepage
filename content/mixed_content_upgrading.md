@@ -37,7 +37,7 @@ Originally, this referred to `<script>` and `<iframe>` elements, ensuring
 that a network attacker can not modify or inject scripts into a victim page.
 Other content, so-called *passive* mixed content (e.g., images)
 were still allowed. The goal of this change, back then, was to prevent the
-attac from active network attackers but still
+attack from active network attackers but still
 [supporting existing content](https://www.w3.org/TR/html-design-principles/#support-existing-content),
 which still used a *lot* of HTTP. As such, the active attacks were thwarted,
 but passive attackers were still be able to infer browsing behavior through
