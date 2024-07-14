@@ -7,10 +7,10 @@ Here's a list of thigs that currently occupy my thoughts.
 
 ### Life
 
-- looking forward to my girl's first day of school
+- looking forward to my daughter's first day of school
 - riding my bike all summer long
 - meeting my team IRL in Dublin
-- trying to blog more about web security
+- polishing my web page
 
 ### Work
 

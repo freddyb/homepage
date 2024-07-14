@@ -40,7 +40,7 @@
   </label>
   <div class="trigger">
     <a class="page-link" href="{{ SITEURL }}/archives.html">Blog</a>
-    {% for page in pages %}{% if not (page.save_as == "index.html") %}
+    {% for page in pages %}{% if not (page.save_as == "index.html") and not (page.title == "Now") %}
     <a class="page-link" href="{{ SITEURL }}/{{ page.save_as if page.save_as else page.url }}">{{ page.title }}</a>
     {% endif %}{% endfor %}
 </div>
