@@ -40,4 +40,5 @@ in 2012, which concluded my studies of IT-Security at the [Ruhr University](http
 in Bochum. This is also where I co-founded the CTF team
 [fluxfingers](https://fluxfingers.net).
 
-Please proceed to my [blog posts](archives.html) to read more.
+Please proceed [here to read my blog posts](archives.html) or learn more about
+[my open source projects and conference talks](https://frederikbraun.de/pages/publications.html).
