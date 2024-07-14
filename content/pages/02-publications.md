@@ -5,12 +5,18 @@ Slug: publications
 
 ## Presentations <!-- TODO add PDF/slides -->
 
-* What if XSS was a browser bug? at Hacking in Parallel Berlin 2022
-* Finding and Fixing DOM-based XSS at enterJS Darmstadt - 2022<!-- https://docs.google.com/presentation/d/1_FiYfNICK_lA68CaBo7LJZuORl5tkV0R-kVbnozyCFY/edit#slide=id.gde8ce37b72_0_10 -->
-* Making of: The Sanitizer API at Nullcon Berlin - 2022: [Video](https://www.youtube.com/watch?v=-f4JP3nwkDo)
+* Cross Origin Isolation at OWASP Berlin Meeting - 2024,
+[Slides](/publications/cross_origin_isolation_2024.pdf)
+* What if XSS was a browser bug? at Hacking in Parallel Berlin - 2022,
+[Slides](/publications/what_if_xss_was_a_browser_bug_hip_berlin_2022.pdf)
+* Finding and Fixing DOM-based XSS at enterJS Darmstadt - 2022,
+[Slides](/publications/enterjs_finding_fixing_domxss_static_analysis_2022.pdf)
+* Making of: The Sanitizer API at Nullcon Berlin - 2022: [Video](https://www.youtube.com/watch?v=-f4JP3nwkDo),
+[Slides](/publications/making_of_sanitizer_api_nullcon_2022.pdf)
 * Fixing Security Bugs in Firefox at Mozilla Berlin All-Hands - 2020
 * Remote code execution in Firefox beyond memory corruptions
-at OWASP Global AppSec Amsterdam - 2019: [Blog post](https://frederikbraun.de/firefox-ui-xss-leading-to-rce.html)
+at OWASP Global AppSec Amsterdam - 2019: [Blog post](https://frederikbraun.de/firefox-ui-xss-leading-to-rce.html),
+[Slides](/publications/owasp_appsec_ams_2019_rce_in_firefox_uxss.pdf)
 * A CDN that can not XSS you: Using Subresource Integrity
 at OWASP AppSec EU, Amsterdam - 2015: [Video](https://www.youtube.com/watch?v=K8ws8qxBJqg), [Blog post](https://frederikbraun.de/using-subresource-integrity.html)
 * We're stuggling to keep up - A brief history of browser security
