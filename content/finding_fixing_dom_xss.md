@@ -97,7 +97,7 @@ foo.innerHTML = DOMPurify.purify(evil);
 
 We currently recommend using [DOMPurify](https://github.com/cure53/DOMPurify/) as your sanitizer and our linter allows such calls in our default configuration. In parallel, we are also actively working on specifying and implementing a secure [Sanitizer API](https://wicg.github.io/sanitizer-api/) for the web platform. Either way, as long as our sanitizer function is well implemented, the input data doesn't have to be.
 
-With all these techniques and decisions in mind, we ended up developing an eslint plugin called **[eslint-plugin-no-unsanitized](https://github.com/mozilla/eslint-plugin-no-unsanitized)**, which also contains checks for other typical XSS-related source code fragments like `document.write()` and is fully configurable in terms of which sanitizers you want to allow.
+With all these techniques and decisions in mind, we ended up developing an eslint plugin called [**eslint-plugin-no-unsanitized**](https://github.com/mozilla/eslint-plugin-no-unsanitized), which also contains checks for other typical XSS-related source code fragments like `document.write()` and is fully configurable in terms of which sanitizers you want to allow.
 
 # Evaluation & Integration
 
@@ -115,7 +115,7 @@ Once all code has been integrated, it should be on the security & analysis teams
 
 # Conclusion: You can fix DOM-XSS
 
-Fixing DOM-based XSS across a whole codebase is not easy, but we believe this overview will serve as a useful guide: As a first step, we can highly recommend just using the [eslint plugin no-unsanitized]((https://github.com/mozilla/eslint-plugin-no-unsanitized)) as it is and running it against your source code. A dry-run will already tell you whether the topic of DOM-based XSS is a problem at all. Our integration section showed how you can start using the linter gradually, based on risk or feasibility. But we also want to note that source code analysis is not a silver bullet: There are notable caveats and it is useful to complement static analysis with enforcement in the browser and at runtime.
+Fixing DOM-based XSS across a whole codebase is not easy, but we believe this overview will serve as a useful guide: As a first step, we can highly recommend just using the [eslint plugin no-unsanitized](https://github.com/mozilla/eslint-plugin-no-unsanitized) as it is and running it against your source code. A dry-run will already tell you whether the topic of DOM-based XSS is a problem at all. Our integration section showed how you can start using the linter gradually, based on risk or feasibility. But we also want to note that source code analysis is not a silver bullet: There are notable caveats and it is useful to complement static analysis with enforcement in the browser and at runtime.
 But, eventually you will be able to get rid of a lot of DOM-XSS.
 
 
