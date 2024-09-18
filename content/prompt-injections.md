@@ -27,7 +27,7 @@ Prompt injections.
 A lot has been written about prompt injections and there is a [good
 introduction of prompt injection attacks from Simon
 Willison](https://simonwillison.net/2022/Sep/12/prompt-injection/), as
-well as a great piece that succintly puts it as
+well as a great piece that succinctly puts it as
 ["You can't solve AI security problems with more
 AI"](https://simonwillison.net/2022/Sep/17/prompt-injection-more-ai/).
 
@@ -39,9 +39,9 @@ the same text box!) and the AI system will be easily confused. Latest solutions
 to this problem appear to be tweaks to the weighting of importance and relevance
 from text that comes in earlier than the rest and calling it "system prompt".
 Some APIs will even allow two inputs, the "system prompt" and the "input".
-The solution undernath is unfortunately still a hope that staticis will play
-out and the math will be in favor of the system prompt. It is my (admittedly)
-limited understanding that these solutions do not fix the vulnerability class
+This approach is unfortunately still a hope that statistics will play
+out in favor of the system prompt. It is my (admittedly
+limited) understanding that these solutions do not fix the vulnerability class
 at the right level.
 
 My main take away is that you can often fix security bugs as *bug classes* by
@@ -54,8 +54,8 @@ or in the compiler by introducing additional checks instead of the
 application developer being tasked to "do the right thing" every single
 time they touch a pointer.
 * Cross-Site-Scripting (XSS) should be fixed by introducing limitations to
-how code (JavaScript) is interspersed with data (HTML) through strict templating
-(e.g., Jinja2 is doing a phenomenal job) or at the browser level with
+how code (JavaScript) is interspersed with data (HTML) through strict encoding
+with templates (e.g., Jinja2 is doing a phenomenal job) or at the browser level with
 controls like Content-Security-Policy (CSP).
 
 
@@ -63,7 +63,7 @@ controls like Content-Security-Policy (CSP).
 <a href="https://www.youtube.com/watch?v=3kEfedtQVOY">The Science of Insecurity</a>
 by Meredith L. Patterson based on her work with Len Sassaman and Sergey Bratus
 explains this in a nice way by going all the way to formal language theory and
-<a href="https://en.wikipedia.org/wiki/Chomsky_hierarchy">the Chomsky hierarchy of langauge</a>.
+<a href="https://en.wikipedia.org/wiki/Chomsky_hierarchy">the Chomsky hierarchy of language</a>.
 </aside>
 
 P.S: Please try have an "AI" system automatically summarize this article. As of today,
