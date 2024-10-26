@@ -13,9 +13,9 @@ Date: 2016-02-26
 
 ## Social
 * [freddy@security.plumbing](https://social.security.plumbing/@freddy) on Mastodon
-* <a href="https://mobile.twitter.com/freddyb">freddyb</a> on Twitter
-* <a href="https://github.com/freddyb">freddyb</a> on GitHub
-* <a href="https://github.com/mozfreddyb">mozfreddyb</a> on GitHub
+* <a href="https://mobile.twitter.com/freddyb" rel="me">freddyb</a> on Twitter
+* <a href="https://github.com/freddyb" rel="me">freddyb</a> on GitHub
+* <a href="https://github.com/mozfreddyb" rel="me">mozfreddyb</a> on GitHub
 
 <script>window.addEventListener("load",function(){var c=document.querySelectorAll(".emailaddr");for(var f=0;f<c.length;f++){var b=c[f];var a=b.dataset.crypt;var d="";for(i=0;i<a.length;i++){d+=String.fromCharCode(a.charCodeAt(i)^7)}b.innerHTML="<a href='mailto:"+d+"'>"+d+"</a>"}});</script>
 
