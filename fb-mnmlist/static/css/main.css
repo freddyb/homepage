@@ -4,6 +4,16 @@
   --color-link: #1f54a6;
   --color-border-top: #284877;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #333336;
+    --color-primary: #fffff2;
+    --color-link: #abf2ff;
+    --color-border-top: #abf2ff;
+  }
+  /* hack to improve  color for HTML in code snippets, manual override */
+  .nt { color: #fffff2 !important; }
+}
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Roboto", "Noto Sans", "Droid Sans", sans-serif;

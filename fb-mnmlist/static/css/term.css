@@ -1,6 +1,6 @@
 :root {
-    --color-text: #000;
-    --color-bg: #fff;
+    --color-primary: #fff;
+    --color-background: #000;
     --color-link: lightgreen;
     --color-border-top: lightgreen;
   }
