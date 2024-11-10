@@ -1,6 +1,6 @@
 :root {
-  --color-text: #fff;
-  --color-bg: #000;
+  --color-background: #fff;
+  --color-primary: #000;
   --color-link: #1f54a6;
   --color-border-top: #284877;
 }
@@ -8,8 +8,8 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Roboto", "Noto Sans", "Droid Sans", sans-serif;
   line-height: 1.6;
-  background-color: var(--color-text);
-  color: var(--color-bg);
+  background-color: var(--color-background);
+  color: var(--color-primary);
   display: flex;
   min-height: 100vh;
   flex-direction: column;
