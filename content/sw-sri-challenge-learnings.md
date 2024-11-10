@@ -66,7 +66,7 @@ Having looked at those submissions that the ServiceWorker does not see, let's ta
 let LOCALFILES = {};
 LOCALFILES["/style.css"] = "sha384-q2bP418TFL/LOAo5XrjD7OciiOi63q6OKnDH67oOGNkWc/rvUaWpynoatxySxEPF";
 LOCALFILES["/sri-sha.js"] = "sha384-TKCoLrAkiPTzJzLNLqSmFqC0XA9PCMUwSYg2E/FosZEy7h26mwR9wONvTZ9Zvtj9";
-LOCALFILES["/initialize-sw.js"] = "sha384-32IhktVnY10EwfUKtlhYBUoBysS2QM8cmW1bW2HENM3nIEmGDNwpkqdmpaE2jF7Z";#
+LOCALFILES["/initialize-sw.js"] = "sha384-32IhktVnY10EwfUKtlhYBUoBysS2QM8cmW1bW2HENM3nIEmGDNwpkqdmpaE2jF7Z";
 LOCALFILES["/sri-worker.js"] = "sha384-rRSq8lAgvvL9Tj617AxQJyzf1mB0sO0DfJoRJUMhqsBymYU3S+6qW4ClBNBIvhhk"
 let parsed = new URL(request.url);
 // other free pass: same-origin
