@@ -587,7 +587,9 @@ details > summary > code {
 }
 
 #pi {
-  display: flex; align-content:end; justify-content: end; color: white; text-shadow: 1px 1px black;
+  display: inline-block;
+  text-align: right;
+  text-shadow: 1px 1px black;
   cursor: default;
 
 }

@@ -42,9 +42,7 @@ all remaining code is his work.
   nav, h1 {
     animation: textShadow 1.6s infinite;
   }
-  
-  
-  
+
   @keyframes flicker {
     0% {
       opacity: 0.27861;
