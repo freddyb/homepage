@@ -255,8 +255,8 @@ nav[role="custom-dropdown"] > label {
     position: absolute;
     top: 9px;
     right: 15px;
-    background-color: #fbfdff;
-    border: 1px solid #f1f5fa;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-primary);
     border-radius: 5px;
     text-align: right;
   }
@@ -278,10 +278,11 @@ nav[role="custom-dropdown"] > label {
     line-height: 0;
     padding-top: 10px;
     text-align: center;
+    background-color: var(--color-background);
   }
 
   .site-nav .menu-icon > svg {
-    fill: #284877;
+    fill: var(--color-primary);
   }
 
   .site-nav input ~ .trigger {
@@ -327,7 +328,8 @@ blockquote {
   font-weight: normal;
 }
 
-  pre { line-height: 125%; }
+
+pre { line-height: 125%; }
 
 /* Pygments default block starts here */
 
