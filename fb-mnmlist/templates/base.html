@@ -12,14 +12,14 @@
  <meta property="og:type" content="website"/>
  <meta name="twitter:card" content="summary"/>
 {% if article %}
- <meta name="description" content="Frederik Braun - {{ article.title }}" />
- <meta property="og:title" content="Frederik Braun - {{ article.title }}"/>
+ <meta name="description" content="{{ article.title }}" />
+ <meta property="og:title" content="{{ article.title }}"/>
  <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}"/>
- <meta name="twitter:title" content="Frederik Braun - {{ article.title }}" />
+ <meta name="twitter:title" content="{{ article.title }}" />
  <meta name="fediverse:author" content="@freddy@security.plumbing" />
  <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}"/>
 {% elif page %}
-  <meta name="description" content="Frederik Braun is a security engineer at Mozilla, working on Firefox security." />
+ <meta name="description" content="Frederik Braun is a security engineer at Mozilla, working on Firefox security." />
  <meta property="og:title" content="{{ page.title }}"/>
  <meta property="og:url" content="{{ SITEURL }}/{{ page.save_as if page.save_as else page.url }}"/>
  <meta name="twitter:title" content="{{ page.title }}" />
