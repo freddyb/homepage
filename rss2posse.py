@@ -48,18 +48,18 @@ class MastodonTarget:
 
 def prompt_article(i: int, length: int, article: dict) -> str | None:
   print(f"{bcolors.BOLD}Do you want to syndicate the following article? ({i}/{length})")
-  print(" Title: ", article.get('title', ''))
-  print(" Date: ", article.get('published', ''))
+  print(" Title:", article.get('title', ''))
+  print(" Date:", article.get('published', ''))
   print("")
   print("The suggested blurb is as follows (but may be shortened by syndication target)")
-  print(f">>>{bcolors.OKBLUE}")
+  print(f">>>{bcolors.OKGREEN}")
   if hasattr(article, "blurb"):
     print(f"  {article.get('blurb')}")
   else:
     clean_summary = nh3.clean(article.get('summary', ''), tags=set()).replace("\n"," ").strip()
     article['blurb'] = f"{article.get('title', '')} ({article.get('link', '')}): {clean_summary}"
     print(article['blurb'])
-  print("<<<")
+  print(f"<<<{bcolors.ENDC}")
   # TODO: a stop-signal would be cool so it can continue posting but stop asking for the rest.
   print(f"{bcolors.OKBLUE}{bcolors.BOLD}({i}/{length}) Publish? [y,N,e,r,q?]{bcolors.ENDC}",)
   choice = input().lower()
@@ -103,7 +103,10 @@ def prompt_article(i: int, length: int, article: dict) -> str | None:
 
 if __name__ == "__main__":
   logging.basicConfig(level=logging.DEBUG)
-  config = configparser.ConfigParser()
+  # TODO: With '=' as a delimiter, we can't have titles with quotes
+  # ... we should escape/remove equal signs from `article.title`.
+  # ... access once into `article_title` and then escape there.
+  config = configparser.ConfigParser(delimiters=('='))
   config.read('rss2posse.ini')
   if len(sys.argv) > 1 and sys.argv[1] == "--purge-cache":
     config.remove_section("cache")
@@ -138,7 +141,7 @@ if __name__ == "__main__":
       continue
     age = NOW - datetime.datetime.fromisoformat(article.published)
     if (age.days > 365):
-        logging.info(f"Skipping old article '{article.title}'.")
+        logging.debug(f"Skipping old article '{article.title}' without asking.")
         config['cache'][article.title] = "SKIP"
         continue
     text = prompt_article(i, length, article)
