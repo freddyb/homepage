@@ -20,33 +20,17 @@ class bcolors:
 
 logging.basicConfig(level=logging.DEBUG)
 
-class ConfigReader:
-    def __init__(self):
-        pass
-    def read_config(self, filename):
-        parser = configparser.ConfigParser()
-        try:
-            parser.read(filename)
-            # parse only those sections and options that have values
-            result = {}
-            for section in parser.sections():
-                result[section] = {option: value for option, value in parser.options(section) if value}
-            return result
-        except Exception as e:
-            print(f"Error reading configuration file: {e}")
-            return None
-
 class Target():
   def __init__(self, config):
     self.config = config
-  def send_plain_text(self, text):
+  def send_plain_text(self, text: str):
     pass
 
 class BlueSkyTarget(Target):
-  def __init__(self, bskycfg):
+  def __init__(self, bskycfg: dict):
     from bsky_bridge import BskySession
     self.session = BskySession(bskycfg['username'], bskycfg['password'])
-  def send_plain_text(self, text):
+  def send_plain_text(self, text: str):
     from bsky_bridge import post_text
     post_text(self.session, text)
 
@@ -57,29 +41,30 @@ class MastodonTarget:
     ## We don't want a text file in this API. But let's keep it because for now
     # Also: we have done a lot of setup and clearly any other user wouldnt have.
     self.session =  Mastodon(access_token = "mastodon_user.secret")
-  def send_plain_text(self, text):
+  def send_plain_text(self, text: str):
     self.session.toot(text)
 
-def prompt_article(i, l, article):
-  print(f"{bcolors.OKGREEN}Do you want to syndicate the following article? ({i}/{l})")
-  print(" Title: ", article.title)
-  print(" Date: ", article.published)
+def prompt_article(i: int, l: int, article: dict) -> str | None:
+  print(f"{bcolors.BOLD}Do you want to syndicate the following article? ({i}/{l})")
+  print(" Title: ", article.get('title', ''))
+  print(" Date: ", article.get('published', ''))
   print("")
   print("The suggested blurb is as follows (but may be shortened by syndication target)")
-  print(">>>")
+  print(f">>>{bcolors.OKBLUE}")
   if hasattr(article, "blurb"):
-    print(f"  {article.blurb}")
+    print(f"  {article.get('blurb')}")
   else:
-    clean_summary = nh3.clean(article.summary, tags=set()).replace("\n"," ").strip()
-    article.blurb = f"  {article.title} ({article.link}): {clean_summary}"
-    print(article.blurb)
+    clean_summary = nh3.clean(article.get('summary', ''), tags=set()).replace("\n"," ").strip()
+    article['blurb'] = f"{article.get('title', '')} ({article.get('link', '')}): {clean_summary}"
+    print(article['blurb'])
   print("<<<")
+  # TODO: a stop-signal would be cool so it can continue posting but stop asking for the rest.
   print(f"{bcolors.OKBLUE}{bcolors.BOLD}({i}/{l}) Publish? [y,N,e,r,q?]{bcolors.ENDC}",)
   choice = input().lower()
   if choice == "?":
-    print(f"{bcolors.FAIL}These are your choice")
+    print(f"{bcolors.FAIL}These are your choices:")
     print("y = Yes, use this text.")
-    print("n = No, skip this article.")
+    print("n = No, skip this article. (Default.)")
     print("e = Use the text but let me edit first (will prompt again")
     print("r = Please reset the text to the default suggestion (will prompt again)")
     print("? = Print this text.")
@@ -87,10 +72,10 @@ def prompt_article(i, l, article):
     print("x = Easter eggs.", bcolors.ENDC)
     return prompt_article(i, l, article)
   elif choice == "y":
-    return article.blurb
+    return article.get('blurb', '')
   elif choice == "e": # recurse to prompt for additional input
     print("Please type your input below.")
-    article.blurb = input()
+    article['blurb'] = input()
     return prompt_article(i, l, article)
   elif choice == "r": # reset to link+summary
     delattr(article, "blurb")
@@ -103,10 +88,10 @@ def prompt_article(i, l, article):
     print("""Oh. You just found three Easter Eggs.
            .-.
      ..==./xxx\
-    /<<<<<\    |
-    \>>>>>/xxxx/--.
+    /<<<<<\\    |
+    \\>>>>>/xxxx/--.
      `'==''---; * *`\
-              \* * */
+              \\* * */
                '--'`)""")
   else:
       return None
@@ -116,9 +101,7 @@ def prompt_article(i, l, article):
 
 if __name__ == "__main__":
   logging.basicConfig(level=logging.DEBUG)
-
   config = configparser.ConfigParser()
-
   config.read('rss2posse.ini')
 
   # FIXME take from config.
@@ -137,13 +120,26 @@ if __name__ == "__main__":
   logging.info(f"Initialized {len(targets)} targets.")
   len = len(feed.entries)
   for i, article in enumerate(feed.entries):
+    cached = config.get("cache", article.title)
+    if cached:
+      logging.info(f"Article was cached '{article.title}': {repr(cached)}.")
+      continue
     age = NOW - datetime.datetime.fromisoformat(article.published)
     if (age.days > 365):
         logging.info(f"Skipping old article '{article.title}'.")
+        config['cache']['article.title'] = "SKIP"
         continue
     text = prompt_article(i, len, article)
-    if text is not None:
+    if text is None:
+      logging.info(f"Skipping article '{article.title}' by user request.")
+      config['cache']['article.title'] = "SKIP"
+      # remember not to post this one.
+      # config.write...
+    else: # post.
+      config['cache']['article.title'] = "SENT " + datetime.datetime.now().isoformat()
       for target in targets:
         print("For target x out of y. This is the text. We are not actually sending.")
         print(text)
         #target.send_plain_text(text)
+  with open('rss2posse.ini', 'w') as configfile:
+    config.write(configfile)
