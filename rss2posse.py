@@ -44,8 +44,8 @@ class MastodonTarget:
   def send_plain_text(self, text: str):
     self.session.toot(text)
 
-def prompt_article(i: int, l: int, article: dict) -> str | None:
-  print(f"{bcolors.BOLD}Do you want to syndicate the following article? ({i}/{l})")
+def prompt_article(i: int, length: int, article: dict) -> str | None:
+  print(f"{bcolors.BOLD}Do you want to syndicate the following article? ({i}/{length})")
   print(" Title: ", article.get('title', ''))
   print(" Date: ", article.get('published', ''))
   print("")
@@ -59,7 +59,7 @@ def prompt_article(i: int, l: int, article: dict) -> str | None:
     print(article['blurb'])
   print("<<<")
   # TODO: a stop-signal would be cool so it can continue posting but stop asking for the rest.
-  print(f"{bcolors.OKBLUE}{bcolors.BOLD}({i}/{l}) Publish? [y,N,e,r,q?]{bcolors.ENDC}",)
+  print(f"{bcolors.OKBLUE}{bcolors.BOLD}({i}/{length}) Publish? [y,N,e,r,q?]{bcolors.ENDC}",)
   choice = input().lower()
   if choice == "?":
     print(f"{bcolors.FAIL}These are your choices:")
@@ -70,16 +70,16 @@ def prompt_article(i: int, l: int, article: dict) -> str | None:
     print("? = Print this text.")
     print("q = Quit immediately.")
     print("x = Easter eggs.", bcolors.ENDC)
-    return prompt_article(i, l, article)
+    return prompt_article(i, length, article)
   elif choice == "y":
     return article.get('blurb', '')
   elif choice == "e": # recurse to prompt for additional input
     print("Please type your input below.")
     article['blurb'] = input()
-    return prompt_article(i, l, article)
+    return prompt_article(i, length, article)
   elif choice == "r": # reset to link+summary
     delattr(article, "blurb")
-    return prompt_article(i, l, article)
+    return prompt_article(i, length, article)
   elif choice == "n":
     return None
   elif choice == "q":
