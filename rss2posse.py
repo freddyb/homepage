@@ -28,6 +28,7 @@ class Target():
 
 class BlueSkyTarget(Target):
   def __init__(self, bskycfg: dict):
+    self.name = f"BlueSky({bskycfg['username']})"
     from bsky_bridge import BskySession
     self.session = BskySession(bskycfg['username'], bskycfg['password'])
   def send_plain_text(self, text: str):
@@ -36,6 +37,7 @@ class BlueSkyTarget(Target):
 
 class MastodonTarget:
   def __init__(self):
+    self.name = "Mastodon()"
     from mastodon import Mastodon
     ## This is tricky and wrong for our config abstraction
     ## We don't want a text file in this API. But let's keep it because for now
@@ -103,7 +105,12 @@ if __name__ == "__main__":
   logging.basicConfig(level=logging.DEBUG)
   config = configparser.ConfigParser()
   config.read('rss2posse.ini')
-
+  if len(sys.argv) > 1 and sys.argv[1] == "--purge-cache":
+    config.remove_section("cache")
+    with open('rss2posse.ini', 'w') as configfile:
+      config.write(configfile)
+    logging.info("OK. Article cache was removed.")
+    sys.exit(0)
   # FIXME take from config.
   feedpath = "output/feeds/all.atom.xml"
   feed = feedparser.parse(feedpath)
@@ -120,28 +127,37 @@ if __name__ == "__main__":
     logging.info("Mastodon config found.")
     targets.append(MastodonTarget())
   logging.info(f"Initialized {len(targets)} targets.")
-  len = len(feed.entries)
+
+  # Going through feed entries.
   for i, article in enumerate(feed.entries):
-    cached = config.get("cache", article.title)
-    if cached:
+    if not 'cache' in config.sections():
+      config.add_section("cache")
+    cached = config['cache'].get(article.title, None)
+    if cached and (cached.startswith("SKIP") or cached.startswith("SENT")):
       logging.info(f"Article was cached '{article.title}': {repr(cached)}.")
       continue
     age = NOW - datetime.datetime.fromisoformat(article.published)
     if (age.days > 365):
         logging.info(f"Skipping old article '{article.title}'.")
-        config['cache']['article.title'] = "SKIP"
+        config['cache'][article.title] = "SKIP"
         continue
     text = prompt_article(i, length, article)
     if text is None:
       logging.info(f"Skipping article '{article.title}' by user request.")
-      config['cache']['article.title'] = "SKIP"
+      config['cache'][article.title] = "SKIP"
       # remember not to post this one.
       # config.write...
     else: # post.
-      config['cache']['article.title'] = "SENT " + datetime.datetime.now().isoformat()
+      logging.info(f"Submitting '{article.title}'.")
       for target in targets:
         print("For target x out of y. This is the text. We are not actually sending.")
         print(text)
-        #target.send_plain_text(text)
+        try:
+          target.send_plain_text(text)
+          config['cache'][article.title] = "SENT " + datetime.datetime.now().isoformat()
+        except Exception:
+          logging.error(f"Failed sending '{article.title}' to {target.name}.")
+          config['cache'][article.title] = "FAILED " + datetime.datetime.now().isoformat()
+
   with open('rss2posse.ini', 'w') as configfile:
     config.write(configfile)
