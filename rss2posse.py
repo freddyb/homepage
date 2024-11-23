@@ -109,7 +109,9 @@ if __name__ == "__main__":
   feed = feedparser.parse(feedpath)
   logging.info(f"Parsed feed at {feedpath} with title '{feed.feed.title}' and {len(feed.entries)} entries.")
   NOW = datetime.datetime.now(datetime.timezone.utc)
+  length = len(feed.entries)
 
+  # Initialize targets
   targets = list()
   if 'bluesky' in config:
     logging.info("Bluesky config found.")
@@ -129,7 +131,7 @@ if __name__ == "__main__":
         logging.info(f"Skipping old article '{article.title}'.")
         config['cache']['article.title'] = "SKIP"
         continue
-    text = prompt_article(i, len, article)
+    text = prompt_article(i, length, article)
     if text is None:
       logging.info(f"Skipping article '{article.title}' by user request.")
       config['cache']['article.title'] = "SKIP"
