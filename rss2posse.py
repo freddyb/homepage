@@ -99,8 +99,6 @@ def prompt_article(i: int, length: int, article: dict) -> str | None:
       return None
 
 
-
-
 if __name__ == "__main__":
   logging.basicConfig(level=logging.DEBUG)
   # TODO: With '=' as a delimiter, we can't have titles with quotes
