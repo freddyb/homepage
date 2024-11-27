@@ -14,7 +14,7 @@ finally answer the question why web security best practices is always
 opt-in and finally how YOU can get increased security controls.
 
 
-The [HTML Design Principles](https://www.w3.org/TR/html-design-principles/) state that
+The [W3C HTML Design Principles](https://www.w3.org/TR/html-design-principles/) state that
 > "When considering changes to legacy features or behavior... ... the benefit of the
 > proposed change should be weighed against the likely cost of breaking
 > content \[...\] In some cases, it may be desirable to make a nonstandard
@@ -128,7 +128,7 @@ when you can.
 
 ### `Cross-Origin-Opener-Policy` (COOP)
 
-![The diagram from above, but with different effects due to Cross-Origin-Opener.Policy. Light blue window and two popups. The light blue popup gets full DOM access as before. The yellow (cross-origin) popup gets no window handle at all.](images/god24-xs-attacks/large-14.jpg){.slide}
+![The diagram from above, but with different effects due to Cross-Origin-Opener-Policy. Light blue window and two popups. The light blue popup gets full DOM access as before. The yellow (cross-origin) popup gets no window handle at all.](images/god24-xs-attacks/large-14.jpg){.slide}
 
 Speaking of these optional controls: There is a HTTP response header
 called `Cross-Origin-Opener-Policy` (COOP) that allows your website to
@@ -144,13 +144,15 @@ content from being embedded on an attacker website.
 
 ### `Cross-Origin-Resource-Policy` (CORP)
 
-![](images/god24-xs-attacks/large-17.jpg){.slide}
+![[Diagram of a web page requesting things from an asset CDN, which is using Cross-Origin-Resource-Policy. Therefore the browser will block all loads from a third-party sites.](images/god24-xs-attacks/large-17.jpg){.slide}
 
 Preventing your content from being embedded cross-site is easily done
 with `Cross-Origin-Resource-Policy` (CORP) and a value of
 e.g., `same-site`. In this case, you can rely that all sorts of embeds
 are disallowed at the browser level (hey, anyone remember "hot link"
-detections?)
+detections?). However, this might be too strict and not nuanced enough,
+for example if some resources are public or are supposed to be used in some
+contexts but not all.
 
 ### Fetch metadata request headers
 
