@@ -8,7 +8,7 @@ tags: websecguide
 
 ![Title Slide. Firefox log in the top right. Headline is "Dealing with Cross-Site Attacks". Presentation from Frederik Braun held at German OWASP Day 2024 in Leipzig](images/god24-xs-attacks/large-0.jpg){.slide}
 
-This presentation is about cross-site leak attacks and what
+This article is about cross-site leak attacks and what
 recent defenses have been introduced to counter them. I also want to
 finally answer the question why web security best practices is always
 opt-in and finally how YOU can get increased security controls.
@@ -53,7 +53,7 @@ API" and "insecure API".
 
 ![Diagram showing a browser window and a popup. They are both colored in light blue (cyan) to indicate they are in the same origin. They have full bidirection access to each other.](images/god24-xs-attacks/large-5.jpg){.slide}
 
-Popups are a good example. As you will see in the slide above, the return value of `window.open()`
+Popups are a good example. As you will see in the diagram above, the return value of `window.open()`
 gives a reference to the popup window. And the popup gets a reference to
 the main window with the `opener` variable. If the pop-up is
 same-origin, there is full DOM access through both of these window
