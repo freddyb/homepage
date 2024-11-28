@@ -144,7 +144,7 @@ content from being embedded on an attacker website.
 
 ### `Cross-Origin-Resource-Policy` (CORP)
 
-![[Diagram of a web page requesting things from an asset CDN, which is using Cross-Origin-Resource-Policy. Therefore the browser will block all loads from a third-party sites.](images/god24-xs-attacks/large-17.jpg){.slide}
+![Diagram of a web page requesting things from an asset CDN, which is using Cross-Origin-Resource-Policy. Therefore the browser will block all loads from a third-party sites.](images/god24-xs-attacks/large-17.jpg){.slide}
 
 Preventing your content from being embedded cross-site is easily done
 with `Cross-Origin-Resource-Policy` (CORP) and a value of
