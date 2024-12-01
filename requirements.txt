@@ -1,5 +1,5 @@
 anyio==4.2.0
-asttokens==2.4.1
+asttokens==3.0.0
 blinker==1.8.2
 blurhash==1.1.4
 bsky-bridge==1.0.3
