@@ -10,7 +10,7 @@ I'm a security engineer and manager working on the Mozilla Firefox web browser.
 My work on Firefox involves various topics ranging from security, web standards,
 static analysis, bug bounty, and public speaking. Some of my major projects
 include the
-[eslint-plugin-no-unsanitized](https://github.com/mozilla/eslint-plugin-no-unsanitized/)&nbsp;-
+[eslint-plugin-no-unsanitized](https://github.com/mozilla/eslint-plugin-no-unsanitized/) -
 which helps in
 [finding and fixing DOM-Based
 XSS](https://frederik-braun.com/finding-and-fixing-dom-based-xss-with-static-analysis.html),
