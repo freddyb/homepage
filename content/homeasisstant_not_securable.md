@@ -5,15 +5,11 @@ date: 2024-12-15
 
 Home automation is a cool toy but also allows my house hold to be more energy efficient: My aim was to configure my home's heating to switch off when my family is away and turn back on when we return. This is achieved with home assistant, a popular open-source home automation platform, with location/presence notifications from mobile devices. To do this, the home assistant server needs to be accessible from the internet, as mobile devices must communicate with it remotely.
 
-### The Constraints: VPN and Access Challenges
+### The Constraints
 
-One might suggest using a VPN to secure the connection. However, this approach is impractical for several reasons:
-
-1. **Complexity:** Routing general internet traffic through a VPN introduces unnecessary complexity.
-2. **Bandwidth Limitations:** A VPN could bottleneck the performance for some devices.
-3. **Device Compatibility:** Not all devices can reliably connect to a VPN.
-
-Given these constraints, I concluded that it's necessary to expose Home assisstant directly to the internet, which in turn introduces a security challenge: protecting the server from unauthorized access.
+One might suggest using a VPN to secure the connection. However, this approach is impractical for us for several reasons.
+My main one being that not all devices in our family can connect to a VPN.
+Given our family's constraints, I concluded that it's necessary to expose Home assisstant directly to the internet, which in turn introduces a security challenge: protecting the server from unauthorized access.
 
 ### The Security Dilemma
 
