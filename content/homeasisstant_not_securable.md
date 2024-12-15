@@ -1,4 +1,4 @@
-title: Home Assistant can not be secured for internet access
+title: Home assisstant can not be secured for internet access
 date: 2024-12-15
 
 ### The Goal: Smart Heating Control
@@ -13,16 +13,21 @@ One might suggest using a VPN to secure the connection. However, this approach i
 2. **Bandwidth Limitations:** A VPN could bottleneck the performance for some devices.
 3. **Device Compatibility:** Not all devices can reliably connect to a VPN.
 
-Given these constraints, I concluded that it's necessary to expose Home Assistant directly to the internet, which in turn introduces a security challenge: protecting the server from unauthorized access.
+Given these constraints, I concluded that it's necessary to expose Home assisstant directly to the internet, which in turn introduces a security challenge: protecting the server from unauthorized access.
 
 ### The Security Dilemma
 
-Home assistant allows authentication using username and password (and even two-factor authentication) as its primary security measure. While this is a solid baseline, I don't think it's sufficient in case there are security issues in home assistant itself. I want to provide defense in depth to protect against opportunistic attackers who regularly scan the internet for exposed systems. However, several limitations made this impossible:
+Home assistant allows authentication using username and password (and even two-factor authentication) as its primary security measure.
+While this is a solid baseline, I don't think it's sufficient in case there are security issues in home assistant itself.
+I want to provide defense in depth to protect against opportunistic attackers who regularly scan the internet for exposed systems.
+This could be applied using a reverse HTTP(S) proxy. However, several limitations made this impossible:
 
-- **No Basic Authentication Support:** Home Assistant's mobile apps cannot handle URLs with embedded credentials (e.g., `https://user:pass@hostname`).
-- **Path Limitations:** Home Assistant must be hosted at the root path (`/`), preventing the use of an obscure web host path to deter scanners.
+- **Subdomains:** Home assistant could be hosted on a "secret" domain/subdomain, but I assume that DNS is not universally encrypted and leaks are to be expected.
+- **No Basic Authentication Support:** Home assisstant's mobile apps cannot handle URLs with embedded credentials (e.g., `https://user:pass@hostname`).
+- **Path Limitations:** Home assisstant must be hosted at the root path (`/`), preventing the use of an obscure web host path to deter scanners.
+- **Authentication controls:** Home assistant responds to authentication failures without a HTTP 200 response that carries JSON data. This also makes it impossible to apply controls based on the amount of HTTP errors for too many authentication attempts.
 
-These restrictions make it basically impossible to provide additional security mechanisms like web server authentication or hiding the service behind unconventional paths. As a result, Home Assistant's security depends solely on its internal measures.
+These restrictions make it basically impossible to provide additional security mechanisms like web server authentication or hiding the service behind unconventional paths. As a result, Home assisstant's security depends solely on its internal measures.
 
 ### The Conclusion: A Disappointing State of Affairs
 
