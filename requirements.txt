@@ -1,5 +1,5 @@
 anyio==4.6.2.post1
-asttokens==2.4.1
+asttokens==3.0.0
 blinker==1.9.0
 blurhash==1.1.4
 bsky-bridge==1.0.7
@@ -19,7 +19,7 @@ jedi==0.19.2
 Jinja2==3.1.4
 Markdown==3.7
 markdown-it-py==3.0.0
-MarkupSafe==2.1.5
+MarkupSafe==3.0.2
 Mastodon.py==1.8.1
 matplotlib-inline==0.1.7
 mdurl==0.1.2
@@ -38,7 +38,7 @@ python-dateutil==2.9.0.post0
 python-magic==0.4.27
 pytz==2024.2
 requests==2.32.3
-requests-oauthlib==1.3.1
+requests-oauthlib==2.0.0
 rich==13.9.4
 ruff==0.8.1
 sgmllib3k==1.0.0
@@ -51,5 +51,5 @@ tweepy==4.14.0
 typing_extensions==4.12.2
 Unidecode==1.3.8
 urllib3==2.2.3
-watchfiles==0.21.0
+watchfiles==1.0.0
 wcwidth==0.2.13
