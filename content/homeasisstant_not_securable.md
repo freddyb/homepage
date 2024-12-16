@@ -1,4 +1,4 @@
-title: Home assisstant can not be secured for internet access
+title: Home assistant can not be secured for internet access
 date: 2024-12-15
 
 ### The Goal: Smart Heating Control
@@ -9,7 +9,7 @@ Home automation is a cool toy but also allows my house hold to be more energy ef
 
 One might suggest using a VPN to secure the connection. However, this approach is impractical for us for several reasons.
 My main one being that not all devices in our family can connect to a VPN.
-Given our family's constraints, I concluded that it's necessary to expose Home assisstant directly to the internet, which in turn introduces a security challenge: protecting the server from unauthorized access.
+Given our family's constraints, I concluded that it's necessary to expose home assistant directly to the internet, which in turn introduces a security challenge: protecting the server from unauthorized access.
 
 ### The Security Dilemma
 
@@ -19,11 +19,11 @@ I want to provide defense in depth to protect against opportunistic attackers wh
 This could be applied using a reverse HTTP(S) proxy. However, several limitations made this impossible:
 
 - **Subdomains:** Home assistant could be hosted on a "secret" domain/subdomain, but I assume that DNS is not universally encrypted and leaks are to be expected.
-- **No Basic Authentication Support:** Home assisstant's mobile apps cannot handle URLs with embedded credentials (e.g., `https://user:pass@hostname`).
-- **Path Limitations:** Home assisstant must be hosted at the root path (`/`), preventing the use of an obscure web host path to deter scanners.
+- **No Basic Authentication Support:** Home assistant's mobile apps cannot handle URLs with embedded credentials (e.g., `https://user:pass@hostname`).
+- **Path Limitations:** Home assistant must be hosted at the root path (`/`), preventing the use of an obscure web host path to deter scanners.
 - **Authentication controls:** Home assistant responds to authentication failures without a HTTP 200 response that carries JSON data. This also makes it impossible to apply controls based on the amount of HTTP errors for too many authentication attempts.
 
-These restrictions make it basically impossible to provide additional security mechanisms like web server authentication or hiding the service behind unconventional paths. As a result, Home assisstant's security depends solely on its internal measures.
+These restrictions make it basically impossible to provide additional security mechanisms like web server authentication or hiding the service behind unconventional paths. As a result, home assistant's security depends solely on its internal measures.
 
 ### The Conclusion: A Disappointing State of Affairs
 
