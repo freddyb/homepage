@@ -5,7 +5,9 @@ Slug: publications
 
 ## Presentations <!-- TODO add PDF/slides -->
 
-* Cross Origin Isolation at OWASP Berlin Meeting - 2024,
+* Dealing With Cross-Site Attacks at German OWASP Day in Leipzig - 2024,
+[Blog post](/modern-solutions-xsleaks.html), [Video](https://media.ccc.de/v/god2024-56286-modern-solutions-against-c)
+* Cross Origin Isolation at OWASP Berlin Meeting and PraSec - 2024,
 [Slides](/publications/cross_origin_isolation_2024.pdf)
 * What if XSS was a browser bug? at Hacking in Parallel Berlin - 2022,
 [Slides](/publications/what_if_xss_was_a_browser_bug_hip_berlin_2022.pdf)
