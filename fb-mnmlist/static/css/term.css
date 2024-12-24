@@ -27,4 +27,5 @@ body::after {
   right: 0;
   bottom: 0;
   background: repeating-linear-gradient(transparent, transparent 1px, rgba(0, 0, 0, 0.30) 1px, rgba(0, 0, 0, 0.30) 2px);
+  pointer-events: none;
 }
