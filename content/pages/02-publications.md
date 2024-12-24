@@ -67,3 +67,14 @@ Whitepaper together with Mario Heiderich, Fall 2013
 * [Origin Policy Enforcement in Modern Browsers](/publications/thesis/Thesis-Origin_Policy_Enforcement_in_Modern_Browsers.pdf),
 Diploma thesis, Summer/Fall 2012.
 [Errata (TXT)](/publications/thesis/errata.txt), Test Cases/Appendix available on request.
+
+## Community Service
+
+I have also served on the Program Committee of various conferences.
+
+* Workshop on Measurements, Attacks, and Defenses for the Web (MADWeb) 2025.
+* German OWASP Day (GOD), Leipzig 2024
+* The Network and Distributed System Security (NDSS) Symposium 2023.
+* SecWeb Worksop 2023 (jointly held with IEEE S&P in San Francisco on May 25, 2023).
+* SecWeb Workshop 2021 (jointly held with European S&P).
+* Invited participant to Dagstuhl Seminar 18321 on Web Application Security.
