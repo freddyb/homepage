@@ -3,29 +3,30 @@ Slug: publications
 
 <!-- chronologically descending order. add on top -->
 
-## Presentations <!-- TODO add PDF/slides -->
+## Presentations
 
-* Dealing With Cross-Site Attacks at German OWASP Day in Leipzig - 2024,
+* *With Carrots & Sticks: Can the Browser Handle Web Security?* - **Keynote** at <abbr title="Measurements, Attacks, and Defenses for the Web">MadWeb</abbr> in San Diego - 2024, [Blog post](madweb-keynote-2025.html).
+* The State of https Adoption on the Web, at <abbr title="Measurements, Attacks, and Defenses for the Web">MadWeb</abbr> in San Diego - 2024, [PDF](https://research.mozilla.org/files/2025/03/the_state_of_https_adoption_on_the_web.pdf)
+* Dealing With Cross-Site Attacks, at German OWASP Day in Leipzig - 2024,
 [Blog post](/modern-solutions-xsleaks.html), [Video](https://media.ccc.de/v/god2024-56286-modern-solutions-against-c)
 * Cross Origin Isolation at OWASP Berlin Meeting and PraSec - 2024,
 [Slides](/publications/cross_origin_isolation_2024.pdf)
 * What if XSS was a browser bug? at Hacking in Parallel Berlin - 2022,
 [Slides](/publications/what_if_xss_was_a_browser_bug_hip_berlin_2022.pdf)
-* Finding and Fixing DOM-based XSS at enterJS Darmstadt - 2022,
+* Finding and Fixing DOM-based XSS, at enterJS Darmstadt - 2022,
 [Slides](/publications/enterjs_finding_fixing_domxss_static_analysis_2022.pdf)
-* Making of: The Sanitizer API at Nullcon Berlin - 2022: [Video](https://www.youtube.com/watch?v=-f4JP3nwkDo),
+* Making of: The Sanitizer API, at Nullcon Berlin - 2022: [Video](https://www.youtube.com/watch?v=-f4JP3nwkDo),
 [Slides](/publications/making_of_sanitizer_api_nullcon_2022.pdf)
-* Fixing Security Bugs in Firefox at Mozilla Berlin All-Hands - 2020
+* Fixing Security Bugs in Firefox, at Mozilla Berlin All-Hands - 2020
 * Remote code execution in Firefox beyond memory corruptions
 at OWASP Global AppSec Amsterdam - 2019: [Blog post](https://frederikbraun.de/firefox-ui-xss-leading-to-rce.html),
 [Slides](/publications/owasp_appsec_ams_2019_rce_in_firefox_uxss.pdf)
-* A CDN that can not XSS you: Using Subresource Integrity
+* A CDN that can not XSS you: Using Subresource Integrity,
 at OWASP AppSec EU, Amsterdam - 2015: [Video](https://www.youtube.com/watch?v=K8ws8qxBJqg), [Blog post](https://frederikbraun.de/using-subresource-integrity.html)
 * We're stuggling to keep up - A brief history of browser security
-features at JSConf.EU Berlin - 2014: [Video](https://www.youtube.com/watch?v=mj-U9FlbAl0)
-* Origin Policy Enforcement in Modern Browsers at OWASP AppSec Research
+features, at JSConf.EU Berlin - 2014: [Video](https://www.youtube.com/watch?v=mj-U9FlbAl0)
+* Origin Policy Enforcement in Modern Browsers, at OWASP AppSec Research
 in Hamburg and at Hack in Paris - 2013: [Paper](/publications/thesis/Thesis-Origin_Policy_Enforcement_in_Modern_Browsers.pdf)
-
 
 ## Projects
 
@@ -49,6 +50,8 @@ rewrites HTML source code into DOM instructions (`createElement`, `appendChild` 
 
 ## Blog posts elsewhere
 
+* [Hardening the Firefox Frontend with Content Security Policies](https://attackanddefense.dev/2025/04/09/hardening-the-firefox-frontend-with-content-security-policies.html) with Tom Schuster, Christoph Kerschbaumer
+* [The Evolution of HTTPS Adoption in Firefox](https://attackanddefense.dev/2025/03/31/https-first-in-firefox-136.html), with Simon Friedberger, Malte Jürgens, Christoph Kerschbaumer
 * [Firefox will upgrade more Mixed Content in Version 127](https://blog.mozilla.org/security/2024/06/05/firefox-will-upgrade-more-mixed-content-in-version-127/), with Malte Jürgens, Simon Friedberger, and Christoph Kerschbaumer (June 5, 2024)
 * [DOM Clobbering](https://www.htmhell.dev/adventcalendar/2022/12/) (December 12, 2022)
 * [Finding and Fixing DOM-based XSS with Static Analysis](https://blog.mozilla.org/attack-and-defense/2021/11/03/finding-and-fixing-dom-based-xss-with-static-analysis/) (November 3, 2021)
