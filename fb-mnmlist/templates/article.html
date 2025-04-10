@@ -23,13 +23,15 @@ If you find a mistake in this article, you can <a href="https://github.com/fredd
 {# List Articles #}
 {% if articles|length > 1 %}
 <section id="article-list">
-<h4>Other posts</h4>
+<h4>Recent posts</h4>
 <ol>
 {% endif %}
 {% for article in articles %}
+  {% if loop.index <= 5 %}
   <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
     <em>({{ article.locale_date }})</em>
   </li>
+  {% endif %}
 {% endfor %}            
 {% if articles|length > 1 %}
 </ol>

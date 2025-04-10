@@ -311,6 +311,8 @@ details > summary > code {
   font-size: small;
 }
 
+article li { line-height: 1.7em; }
+
 #pi {
   display: inline-block;
   text-align: right;
