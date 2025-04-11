@@ -3,9 +3,9 @@ Date: 2025-04-08
 Author: Frederik
 Slug: madweb-keynote-2025
 
-NB: This is the blog version of my talk from [Measurements, Attacks, and Defenses for the Web (MADWeb)](https://madweb.work/) 2025, earlier this year. It was not recorded.
+*NB: This is the blog version of my keynote from [Measurements, Attacks, and Defenses for the Web (MADWeb)](https://madweb.work/) 2025, earlier this year. It was not recorded.*
 
-In my talk, I examined web security through the browser's perspective. Various browser features have helped fix transport security issues and increase HTTPS adoption:
+In my keynote, I examined web security through the browser's perspective. Various browser features have helped fix transport security issues and increase HTTPS adoption:
 
 HTTPS adoption was brought to over 90% in ten years. This happened with encouragements in the form of providing more exciting APIs only to Secure Context or deprecating features (like with Mixed Content Blocking).
 
