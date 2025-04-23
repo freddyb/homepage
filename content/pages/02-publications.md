@@ -6,7 +6,6 @@ Slug: publications
 ## Presentations
 
 * *With Carrots & Sticks: Can the Browser Handle Web Security?* - **Keynote** at <abbr title="Measurements, Attacks, and Defenses for the Web">MadWeb</abbr> in San Diego - 2024, [Blog post](madweb-keynote-2025.html).
-* The State of https Adoption on the Web, at <abbr title="Measurements, Attacks, and Defenses for the Web">MadWeb</abbr> in San Diego - 2024, [PDF](https://research.mozilla.org/files/2025/03/the_state_of_https_adoption_on_the_web.pdf)
 * Dealing With Cross-Site Attacks, at German OWASP Day in Leipzig - 2024,
 [Blog post](/modern-solutions-xsleaks.html), [Video](https://media.ccc.de/v/god2024-56286-modern-solutions-against-c)
 * Cross Origin Isolation at OWASP Berlin Meeting and PraSec - 2024,
@@ -64,6 +63,7 @@ rewrites HTML source code into DOM instructions (`createElement`, `appendChild` 
 
 ## Papers
 
+* The State of https Adoption on the Web, at <abbr title="Measurements, Attacks, and Defenses for the Web">MadWeb</abbr> in San Diego - 2024, [PDF](https://research.mozilla.org/files/2025/03/the_state_of_https_adoption_on_the_web.pdf)
 * [Hardening Firefox against Injection Attacks (PDF)](/publications/hardening_paper.pdf), with Christoph Kerschbaumer, Tom Ritter; SecWeb - Designing Security for the Web; Genova, Italy, September 2020
 * [X-Frame-Options: All about Clickjacking?](/xfo-clickjacking.pdf)
 Whitepaper together with Mario Heiderich, Fall 2013
