@@ -20,7 +20,7 @@ Jinja2==3.1.6
 Markdown==3.7
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
-Mastodon.py==1.8.1
+Mastodon.py==2.0.1
 matplotlib-inline==0.1.7
 mdurl==0.1.2
 nh3==0.2.21
