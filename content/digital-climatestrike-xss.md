@@ -72,7 +72,8 @@ Just open the victim website in iframe or popup in a way which leaves you with a
 ```js
 handle.postMessage({
   DIGITAL_CLIMATE_STRIKE: true,
-  'buttonClicked': 'javascript:alert(1)'
+  action: 'buttonClicked',
+  linkUrl: 'javascript:alert(1)'
   }, "*");
 ```
 
