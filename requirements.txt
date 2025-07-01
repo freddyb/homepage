@@ -29,7 +29,7 @@ ordered-set==4.1.0
 parso==0.8.4
 pelican==4.11.0
 pexpect==4.9.0
-pillow==11.2.0
+pillow==11.3.0
 prompt_toolkit==3.0.50
 ptyprocess==0.7.0
 pure_eval==0.2.3
