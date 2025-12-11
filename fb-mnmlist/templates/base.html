@@ -61,5 +61,6 @@
 <div id="pi">
   <span onclick="l=document.createElement('link');l.rel='stylesheet';l.href='/theme/css/term.css';document.head.appendChild(l);">&pi;</span>
 </div>
+{% if page %}{% if page.save_as == "contact.html" %}<img src="/theme/progressive.svg" height="2" aria-hidden="true" />{% endif %}{% endif %}
 </body>
 </html>

@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" viewBox="0 0 13 1" version="1.0" xmlns="http://www.w3.org/2000/svg">
+  <style>rect{width:1px;height:1px;}</style>
+  <rect x="0" style="fill: oklch(0.5 0.2 300);"></rect>
+  <rect x="1" style="fill: oklch(0.96 0.2 110);"></rect>
+  <rect x="2" style="fill: oklch(0.95 0 0);"></rect>
+  <rect x="3" style="fill: oklch(0.70 0.2 350);"></rect>
+  <rect x="4" style="fill: oklch(0.80 0.2 220);"></rect>
+  <rect x="5" style="fill: oklch(0.38 0.2 65);"></rect>
+  <rect x="6" style="fill: oklch(0 0 0);"></rect>
+  <rect x="7" style="fill: oklch(0.45 0.2 24);"></rect>
+  <rect x="8" style="fill: oklch(0.66 0.2 57);"></rect>
+  <rect x="9" style="fill: oklch(0.84 0.2 84);"></rect>
+  <rect x="10" style="fill: oklch(0.65 0.2 130);"></rect>
+  <rect x="11" style="fill: oklch(0.55 0.2 260);"></rect>
+  <rect x="12" style="fill: oklch(0.5 0.2 300);"></rect>
+</svg>
