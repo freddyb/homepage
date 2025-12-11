@@ -1,5 +1,5 @@
 Title: The C3PO Bug in Lego Star Wars: The Complete Saga
-Date: 2025-12-07
+Date: 2025-12-06
 Slug: lego-star-wars-complete-saga-c3po-bug
 Author: Frederik
 

@@ -4,7 +4,11 @@ Slug: why-sethtml
 Author: Frederik
 
 Sanitizing HTML is the practice of taking a piece of HTML and removing some
-unwanted elements and attributes. Most often this is done to allow
+unwanted elements and attributes. We are specifying an API that will be
+directly built into the browser. In fact, you can already use it in
+[Firefox Nightly](https://nightly.mozilla.org/) and Chrome Canary.
+
+Nowadays, HTML sanitization is often done to allow
 user-generated content with HTML but without causing XSS bugs.
 When imported from a library, a sanitizer typically looks like this:
 
@@ -102,7 +106,16 @@ the same.
 
 Except that there's no XSS.
 
-To learn more about the Sanitizer API, please continue on
-[MDN](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API/Using_the_HTML_Sanitizer_API),
-in the [Sanitizer Playground](https://sanitizer-api.dev/),
-or the [Specification](https://github.com/WICG/sanitizer-api/)).
+To learn more about the Sanitizer API, please continue here:
+
+- Download [Firefox Nightly](https://nightly.mozilla.org/)
+- Read [Using the HTML Sanitizer API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API/Using_the_HTML_Sanitizer_API)
+- Our demo page, the [Sanitizer Playground](https://sanitizer-api.dev/)
+- Or read the [Specification](https://github.com/WICG/sanitizer-api/)
+
+### Acknowledgements
+
+This is not my work alone. The specification has been joint work with Anne van
+Kesteren, Tom Schuster, and Daniel Vogelheim. Lots of useful comments came from
+Krzysztof Kotowicz, Luke Warlow, Guillaume Weghsteen, and Mike West and likely
+others.
