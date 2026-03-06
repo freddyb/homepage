@@ -17,7 +17,7 @@ ipdb==0.13.13
 ipython==8.31.0
 jedi==0.19.2
 Jinja2==3.1.6
-Markdown==3.7
+Markdown==3.8.1
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 Mastodon.py==1.8.1
