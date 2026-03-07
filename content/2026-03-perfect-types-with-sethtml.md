@@ -8,7 +8,7 @@ CSP and nothing besides `setHTML()` works, essentially removing all DOM-XSS risk
 
 ## Background: Sanitizer API
 
-I was guest at the [ShopTalkShow Podcast](https://shoptalkshow.com/704/https://shoptalkshow.com/704/)
+I was guest at the [ShopTalkShow Podcast](https://shoptalkshow.com/704/)
 to talk about `setHTML()` and the HTML Sanitizer API. Feel free to listen to the
 whole episode, if you want to take it all in. It's a great introduction.
 
