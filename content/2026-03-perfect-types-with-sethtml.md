@@ -26,7 +26,7 @@ Trusted Types (<abbr>TT</abbr>) is a feature in
 [Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP)
 (<abbr>CSP</abbr>),
 that can help prevent DOM-based XSS. By enabling "trusted types" in your CSP,
-with a policy like so `require-trusted-types-for 'script'; trusted-types 'mypolicy`,
+with a policy like so `require-trusted-types-for 'script'; trusted-types 'mypolicy'`,
 scripts will
 not be able to start HTML parsing/insertion from normal strings (e.g.,
 through `document.write()`, `innerHTML=` and so on).
