@@ -56,10 +56,6 @@ safe methods:
 2. Use `Document.parseHTML()` to insert into a temporary document, select your
 desired piece of context (e.g., with `querySelector`) and then use `cloneNode`
 or other `Node` APIs to move the elements into your current document.
-3. Do **not** get the HTML string out of the temporary document with e.g.,
-`innerHTML`. Even when properly sanitized, additional parsing of untrusted input
-can lead to security bugs
-([mXSS](https://wicg.github.io/sanitizer-api/#mutated-xss)).
 
 ## Acknowledgements
 
