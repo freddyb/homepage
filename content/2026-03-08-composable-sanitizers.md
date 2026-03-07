@@ -3,8 +3,6 @@ Date: 2026-03-08
 Slug: composable-sanitizers
 Author: Frederik
 
-# Composing Sanitizer API configurations
-
 The HTML Sanitizer API allows multiple ways to customize the default allow list
 and this blog post aims to describe a few variations and tricks we came up with
 while writing the specification.
