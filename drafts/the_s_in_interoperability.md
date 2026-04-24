@@ -12,19 +12,24 @@ Eventually, I found myself [co-editing a specification](https://www.w3.org/TR/SR
 which was adopted by all browsers out there.
 
 I learned a lot from this work. It's quite humbling, when
-you learn where something as simple as matching a cryptographic digest to a URL
+you realize that something as simple as matching a cryptographic digest to a URL
 can be ambiguous. The standard format is sha386-base64-encoding-of-the-hash.
 Whereas the typical hex encoding is rather straightforward, base64 comes in two
 encoding alphabets. First, `a-zA-Z0-9/+` and secondly the url-safe variant
 which uses `a-zA-z0-9_-`. We found a major browser liberally accepting both
 types of encoding, because people often time use base64 and base64url
-interchangably. This resulted in all browsers accepting both types of encoding
-in order to ensure site compat in all browsers.
+interchangably. The real fix would have been that the standard clarifies which
+variant is correct and the faulty browser stops.
+
+But due to (somewhat unrelated) issues around proliferation of standards, web
+compatibility and the unfortunate market dominance of certain browsers, this
+resulted in the standard acknowledging that both types of encoding are
+considered valid representations to to ensure site compat in all browsers.
 
 # When a specification becomes a standard
 
 The main difference between a specification and a standard is adoption.
-A specification is at first just a write-up from someone about something.
+A specification is at first just a write-up, an idea how something could be better:
 How it should behave, how it works, what the data structures, the algorithms
 and the interactions of them look like. Anyone can come up with a grammar,
 a parser and a resulting data structure.
@@ -58,7 +63,7 @@ convergence towards full interop, but it may never be fully reached.
 
 # Postel's Law
 
-Most of the time, gradual interop is fine. After all,The internet was built
+Most of the time, gradual interop is fine. After all, the internet was built
 on [rough concensus and running code](https://www.ietf.org/participate/).
 People were told to "be conservative in what you do, be liberal
 in what you accept from others". This, also known as Postel's Law or the
@@ -66,15 +71,13 @@ in what you accept from others". This, also known as Postel's Law or the
 it has served the internet really well in getting separate implementations
 working with each other.
 
-In contrast to that, the presentation by Meredth L. Patterson and Sergey Bratus on [The Science
-of Insecurity](https://www.youtube.com/watch?v=3kEfedtQVOY) and what they
-call [Language-theoretic Security (langsec)](http://www.langsec.org/),
-already calls for stricter formal standards with rigurous parsing and
+In contrast to that, researchers like Meredith L. Patterson and Sergey Bratus  demand for stricter formal standards with rigurous parsing and
 error rejection, rather than ad-hoc recognition that accepts all
-sorts of variants and abmiguities.
+sorts of variants and abmiguities (cf. [The Science
+of Insecurity](https://www.youtube.com/watch?v=3kEfedtQVOY)).
 
-The The IETF's Internet
-Architecture Board (IAB) has also acknowledged this and released
+The The IETF's Internet Architecture Board (IAB) has also acknowledged this
+and released
 [RFC 9413 on Maintaining Robust Protocols](https://intarchboard.github.io/draft-protocol-maintenance/draft-iab-protocol-maintenance.html)
 in 2023:
 As a call for active maintenance and reduced ambiguity, it directly mentions
@@ -112,7 +115,7 @@ CBOR, [Structured Field values for HTTP](https://httpwg.org/specs/rfc8941.html)
 and many more.
 
 In fact, these issues are widely known and can still lead to catastrophic
-issues in 2025:
+issues in 2025.
 
 * **YAML**: [parsing bug leading to an arbitrary file-write on
 GitLab](https://gitlab-com.gitlab.io/gl-security/security-tech-notes/security-research-tech-notes/devfile/)
