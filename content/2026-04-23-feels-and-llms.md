@@ -36,7 +36,7 @@ analysis as long writing. All of history, all of human knowledge is in written
 form. AI is essentially seeding distrust in writing. I fear it may lead to a
 complete loss of what may have been previously considered objective and socially
 accepted Truths. What this means for education, and academia is still largely
-unclear. Not only is an industry killing it's career path for junios, I fear
+unclear. Not only is an industry killing it's career path for juniors, I fear
 we are killing the path for growth and thought of all coming generations.
 
 AI is also bad for the environment, due to their excessive electrical power
