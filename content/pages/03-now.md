@@ -1,25 +1,25 @@
 Title: Now
 Slug: now
 
-*Last Updated: March 2026*
+*Last Updated: April 2026*
 
 Here's a list of thigs that are currently happening. Or at least soon.
 
 ### Life
 
-- I started running in October and slowly started enjoying it too.
-- Ran an ethernet cable through a stubborn condo from the 1900s. GbE at my desk
-now. Nice.
-- Looking forward to meeting more people in 2026, hopefully..
+- I started running in October and still do it three times a week!
+- Finally set up a Meshcore repeater. The house where our condo is has six floors and I got roof access, oh yeah.
+- Looking forward to going out and meeting more people in 2026 :)
 
 ### Work
 
-- Beating the drum around `setHTML()`.
+- Thinking about the next iteration for `setHTML()`
+- Lots of conferences and travel this year.
 - Maybe learn some more C++?
 - Would still like to find time to hunt for a bug of my own, for a change :')
 
 ### Reading
 
-- Hope to pick up reading again. It's truly my favorite way to unwind.
+- "The Goldfinch" by Donna Tartt. Really great read.
 
 Inspired by [Derek Sivers' "now" page](https://sive.rs/now).
