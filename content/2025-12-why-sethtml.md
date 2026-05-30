@@ -6,7 +6,7 @@ Author: Frederik
 Sanitizing HTML is the practice of taking a piece of HTML and removing some
 unwanted elements and attributes. We are specifying an API that will be
 directly built into the browser. In fact, you can already use it in
-[Firefox Nightly](https://nightly.mozilla.org/) and Chrome Canary.
+[Firefox](https://www.firefox.com/en-US/) and Chrome.
 
 Nowadays, HTML sanitization is often done to allow
 user-generated content with HTML but without causing XSS bugs.
@@ -117,5 +117,5 @@ To learn more about the Sanitizer API, please continue here:
 
 This is not my work alone. The specification has been joint work with Anne van
 Kesteren, Tom Schuster, and Daniel Vogelheim. Lots of useful comments came from
-Krzysztof Kotowicz, Luke Warlow, Guillaume Weghsteen, and Mike West and likely
-others.
+Mario Heiderich, Krzysztof Kotowicz, Luke Warlow, Guillaume Weghsteen, and Mike
+West and likely others.
