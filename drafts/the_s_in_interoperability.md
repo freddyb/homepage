@@ -8,86 +8,80 @@ My first involvement with standards was just as a reader. To
 better understand complicated code or unexpected behavior in a protocol.
 After a while, I also got involved and helped clarify certain things to ensure
 implementations align on the same behavior in edge cases.
-Eventually, I found myself [co-editing a specification](https://www.w3.org/TR/SRI/)
-which was adopted by all browsers out there.
+Eventually, I found myself co-editing a specification -
+[Subresource Integrity](https://www.w3.org/TR/SRI/) (SRI) which was published as
+a W3C Recommendation in 2015. The core idea behind SRI is that you include
+third-party JavaScript combined with a SHA2 digest of the expected file.
+If the browser does not find the downloaded URL to match the expected digest,
+the script will not execute. This allows using a fast CDN for JavaScript
+without giving them full control over the scripts on your page - essentially
+reducing the security risks.
 
-I learned a lot from this work. It's quite humbling, when
-you realize that something as simple as matching a cryptographic digest to a URL
-can be ambiguous. The standard format is sha386-base64-encoding-of-the-hash.
-Whereas the typical hex encoding is rather straightforward, base64 comes in two
-encoding alphabets. First, `a-zA-Z0-9/+` and secondly the url-safe variant
-which uses `a-zA-z0-9_-`. We found a major browser liberally accepting both
-types of encoding, because people often time use base64 and base64url
-interchangably. The real fix would have been that the standard clarifies which
-variant is correct and the faulty browser stops.
+The standard format for these digests is e.g.,
+sha386-base64-encoding-of-the-hash.
+While computing the hash digest is rather straightforward, base64 comes in two
+encoding alphabets: First, `a-zA-Z0-9/+` and secondly the url-safe variant
+which uses `a-zA-z0-9_-`. The specification examples all used the former.
+
+Only approximately ten years after publication, in 2025, we still found a bug.
+As part of a compatibility report against Firefox not properly supporting a
+website, we found that the core issue was actually with a different browser.
+The other browser liberally accepted both types of encoding, which resulted in
+websites expecting support for base64 and base64url interchangably.
+The page did not work in Firefox, because it did not accept all hashes a
+website wanted the browser to check, revealing a minor security issue.
+
+The real fix would have been that the standard clarifies that
+the base64 url variant is incorrect and the other browser engine changes
+their behavior.
 
 But due to (somewhat unrelated) issues around proliferation of standards, web
-compatibility and the unfortunate market dominance of certain browsers, this
-resulted in the standard acknowledging that both types of encoding are
-considered valid representations to to ensure site compat in all browsers.
+compatibility and the unfortunate market dominance of certain browsers, we
+went the other road. To support existing web content, we changed the standard
+to acknowledging that both types of encoding are considered valid
+representations.
 
-# When a specification becomes a standard
+This example shows, that it can take multiple years for subtle differences to
+appear. Interoperable specifications can establish a shared
+understanding along a "happy path", but not necessarily in adversarial
+settings. In addition, standards need to continuous maintenance for and active
+stakeholders to ensure that implementations remain interoperable and secure
+over time.
 
-The main difference between a specification and a standard is adoption.
-A specification is at first just a write-up, an idea how something could be better:
+# From specification to standard
+
+Originally, a specification is at first just a write-up, an idea how something
+could be better:
 How it should behave, how it works, what the data structures, the algorithms
 and the interactions of them look like. Anyone can come up with a grammar,
 a parser and a resulting data structure.
-But it takes more than a write-up to form a standard.
 
-For a standard, the specification must be widely implemented and universally
-understood as the same thing. This will work best with iterative co-design of
-the spec, the implementations and intense dicsussions of the corner cases.
-Some may go further and use [shared test suites](https://github.com/web-platform-tests/wpt/),
-ideally even allowing formal verification.
+For a standard, this specification needs a shared agreement that is also
+widely and consistently implemented. This will work best with iterative
+co-design of the spec, the implementations and intense dicsussions of
+corner cases.
+Some may go further and use [shared test suites](https://github.com/web-platform-tests/wpt/).
 
-But sometimes, syntax is deceivably simple to parse without reading the spec:
-People have written parsers for text-based languages. You may know the post
-about [parsing HTML
-with regular expressions](https://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags).
+This will lead to Interoperability (interop), but still
+requires constant maintenance and observation of the ecosystem beyond
+individual implementations. While interop is asymptotic and requires a shared
+agreement over time, security demands **understanding** - a broader reach that
+requires the inspection of limitations and subtle boundaries.
+
+This deeper level of understanding is often missing when implementations
+consider syntax "simple enough" without reading the spec. The base64 SRI example is just one example, but there are more:
+
+Many people have written their own parsers for text-based
+languages. You may have seen code that parses HTML with regular expressions.
 Other great examples of "easily" parsed languages are maybe XML, JSON, or YAML.
 
-# What is interoperability?
-
-Interoperability (interop) is what sets aside the specification from a
-standard. When something is universally understood, implemented and behaves the
-same across multiple languages, frameworks and libraries - only then it becomes
-a true interoperable standard.
-
-Despite a lot of effort, interoperability is more of a path than a destination,
-as it requires constant maintenance and observation of the ecosystem beyond an
-individual implementation.
-
-I would go so far and consider interoperability asymptotic. There's gradual
-convergence towards full interop, but it may never be fully reached.
-
-# Postel's Law
-
-Most of the time, gradual interop is fine. After all, the internet was built
-on [rough concensus and running code](https://www.ietf.org/participate/).
-People were told to "be conservative in what you do, be liberal
-in what you accept from others". This, also known as Postel's Law or the
-[robustness principle](https://en.wikipedia.org/wiki/Robustness_principle) and
-it has served the internet really well in getting separate implementations
-working with each other.
-
-In contrast to that, researchers like Meredith L. Patterson and Sergey Bratus  demand for stricter formal standards with rigurous parsing and
-error rejection, rather than ad-hoc recognition that accepts all
-sorts of variants and abmiguities (cf. [The Science
-of Insecurity](https://www.youtube.com/watch?v=3kEfedtQVOY)).
-
-The The IETF's Internet Architecture Board (IAB) has also acknowledged this
-and released
-[RFC 9413 on Maintaining Robust Protocols](https://intarchboard.github.io/draft-protocol-maintenance/draft-iab-protocol-maintenance.html)
-in 2023:
-As a call for active maintenance and reduced ambiguity, it directly mentions
-that accepting and parsing unexpected input data "is no longer considered
-best practice" (Ibid.).
+But these implementations often make different assumptions, leading to subtle incompatibilities or even security flaws.
 
 # Parser Differentials
 
-As an example, parsing JSON has been known to be a proverbial [minefield](https://seriot.ch/projects/parsing_json.html)
-since at least 2016. Let's examine this JSON string and the resulting data structure:
+More practical, let's look at an issue with JSON, to demonstrate the impact of
+handling input that is ostensibly simple.
+Let's examine this JSON string and the resulting data structure:
 
 ```json
 {
@@ -100,33 +94,36 @@ When parsed into an object `obj`, what do you think will `obj.test` return?
 Most JSON parsers are so liberal that they will happily consume two dictionary
 keys with the same name `"test"`. One implementation may simply assign `obj.test`
 twice: First with `0` and then overwrite it with `1`.
-Another one might check for existance
+Another one might check for existing keys
 and reject the second `"test"` key silently, keeping the first one.
-Given the lack of rigor in the original description of JSON as a
+The lack of rigor in the original description of JSON as a
 "subset of JavaScript" was already acknowledged and raised as problematic
 in the JSON RFC (which came much later in 2017).
-Still to this day, most JSON libraries allow input with duplicate dictionary
-keys.
 
-If you just keep going with the very specific and limited case of dictionary
-parsing, you will find that the same is not only an issue for JSON, but also
-YAML, HTML, XML (attributes on an element are often stored in a dictionary),
-CBOR, [Structured Field values for HTTP](https://httpwg.org/specs/rfc8941.html)
-and many more.
+But still to this day, may implementations allow input
+with duplicate dictionary keys and show divergent behavior.
 
-In fact, these issues are widely known and can still lead to catastrophic
-issues in 2025.
-
-* **YAML**: [parsing bug leading to an arbitrary file-write on
-GitLab](https://gitlab-com.gitlab.io/gl-security/security-tech-notes/security-research-tech-notes/devfile/)
-found by Joern Schneeweisz in 2024
-* **JSON**: 2024 ASIA CCS paper on
-[Cross-Language Differential Testing of JSON Parsers](https://www.mlsec.org/docs/2024b-asiaccs.pdf)
-by Jonas Möller, Felix Weißberg, Lukas Pirch, Thorsten Eisenhofer, and Konrad Rieck
-* **XML**: A bug in ruby-saml [allowed bypassing popular Single-Sign-On (SSO)
-consumers](https://github.blog/security/sign-in-as-anyone-bypassing-saml-sso-authentication-with-parser-differentials/)
-by Peter Stöckli
+While the examples with SRI and JSON are relatively harmless, real
+parser differential bugs were leading to code execution,
+authentication bypasses and more[^1].
 
 # What do we learn from this?
 
-I don't know. Software is shit?
+Perfect interoperability not created through a specification, it needs constant
+maintenance. The ambiguity can only be removed through long-term commitment and
+regular feedback from implementations and users.
+
+The same is true for security: The SRI bug persisted for ten years and
+nobody noticed how implementations disagreed and corner cases were overlooked.
+They only aligned due to a real, user-facing issue.
+
+But these examples are not a warning sign, they are scar tissue that shows how
+the internet is made. Standards can only mature through vigilant maintenance.
+
+The bug reports, the spec issues being filed, the shared test
+cases, sometimes even the random forum complaints. All of these help to
+remove ambiguity and allow internet standards to mature.
+
+In the end, standards are not secure because they are written down. They are secure because people continue to question, understand, and maintain them.
+
+ [^1]: [Parsin JSON is a minefield](https://seriot.ch/security/parsing_json.html), [YML: Devfile file write vulnerability in GitLab](https://gitlab-com.gitlab.io/gl-security/security-tech-notes/security-research-tech-notes/devfile/), [XML: Sign in as anyone: Bypassing SAML SSO authentication with parser differentials](https://github.blog/security/sign-in-as-anyone-bypassing-saml-sso-authentication-with-parser-differentials/), and more: [OffensiveCon25 - Joernchen - Parser Differentials: When Interpretation Becomes a Vulnerability](https://www.youtube.com/watch?v=Dq_KVLXzxH8)
