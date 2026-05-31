@@ -1,5 +1,5 @@
-Title: The _S_ in interoperability
-Date: 2025-04-23
+Title: The S in interoperability
+Date: 2026-05-31
 Author: Frederik
 
 This is a blog post about standards, their proliferation and the issues
@@ -18,7 +18,7 @@ without giving them full control over the scripts on your page - essentially
 reducing the security risks.
 
 The standard format for these digests is e.g.,
-sha386-base64-encoding-of-the-hash.
+`sha(size)-(base64 encoding of the digest)`.
 While computing the hash digest is rather straightforward, base64 comes in two
 encoding alphabets: First, `a-zA-Z0-9/+` and secondly the url-safe variant
 which uses `a-zA-z0-9_-`. The specification examples all used the former.
@@ -44,8 +44,8 @@ representations.
 This example shows, that it can take multiple years for subtle differences to
 appear. Interoperable specifications can establish a shared
 understanding along a "happy path", but not necessarily in adversarial
-settings. In addition, standards need to continuous maintenance for and active
-stakeholders to ensure that implementations remain interoperable and secure
+settings. In addition, standards need to continuous maintenance and active
+stakeholders who ensure that implementations remain interoperable and secure
 over time.
 
 # From specification to standard
@@ -96,10 +96,10 @@ keys with the same name `"test"`. One implementation may simply assign `obj.test
 twice: First with `0` and then overwrite it with `1`.
 Another one might check for existing keys
 and reject the second `"test"` key silently, keeping the first one.
+
 The lack of rigor in the original description of JSON as a
 "subset of JavaScript" was already acknowledged and raised as problematic
 in the JSON RFC (which came much later in 2017).
-
 But still to this day, may implementations allow input
 with duplicate dictionary keys and show divergent behavior.
 
@@ -109,9 +109,9 @@ authentication bypasses and more[^1].
 
 # What do we learn from this?
 
-Perfect interoperability not created through a specification, it needs constant
-maintenance. The ambiguity can only be removed through long-term commitment and
-regular feedback from implementations and users.
+Perfect interoperability is not created through a specification, it needs
+constant maintenance. The ambiguity can only be removed through long-term
+commitment and regular feedback from implementations and users.
 
 The same is true for security: The SRI bug persisted for ten years and
 nobody noticed how implementations disagreed and corner cases were overlooked.
@@ -126,4 +126,4 @@ remove ambiguity and allow internet standards to mature.
 
 In the end, standards are not secure because they are written down. They are secure because people continue to question, understand, and maintain them.
 
- [^1]: [Parsing JSON is a minefield](https://seriot.ch/security/parsing_json.html), [YAML: Devfile file write vulnerability in GitLab](https://gitlab-com.gitlab.io/gl-security/security-tech-notes/security-research-tech-notes/devfile/), [XML: Sign in as anyone: Bypassing SAML SSO authentication with parser differentials](https://github.blog/security/sign-in-as-anyone-bypassing-saml-sso-authentication-with-parser-differentials/), and more: [OffensiveCon25 - Joernchen - Parser Differentials: When Interpretation Becomes a Vulnerability](https://www.youtube.com/watch?v=Dq_KVLXzxH8)
+ [^1]: [JSON](https://seriot.ch/security/parsing_json.html), [YML](https://gitlab-com.gitlab.io/gl-security/security-tech-notes/security-research-tech-notes/devfile/), [XML](https://github.blog/security/sign-in-as-anyone-bypassing-saml-sso-authentication-with-parser-differentials/), [and more](https://www.youtube.com/watch?v=Dq_KVLXzxH8)
