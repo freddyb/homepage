@@ -100,8 +100,8 @@ and reject the second `"test"` key silently, keeping the first one.
 The lack of rigor in the original description of JSON as a
 "subset of JavaScript" was already acknowledged and raised as problematic
 in the JSON RFC (which came much later in 2017).
-But still to this day, many implementations allow input
-with duplicate dictionary keys and show divergent behavior.
+But still to this day, many implementations allow duplicate dictionary
+keys and show divergent behavior.
 
 While the examples with SRI and JSON are relatively harmless, real
 parser differential bugs were leading to code execution,
