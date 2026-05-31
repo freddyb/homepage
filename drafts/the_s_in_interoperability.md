@@ -27,12 +27,12 @@ Only approximately ten years after publication, in 2025, we still found a bug.
 As part of a compatibility report against Firefox not properly supporting a
 website, we found that the core issue was actually with a different browser.
 The other browser liberally accepted both types of encoding, which resulted in
-websites expecting support for base64 and base64url interchangably.
+websites expecting support for base64 and base64url interchangeably.
 The page did not work in Firefox, because it did not accept all hashes a
 website wanted the browser to check, revealing a minor security issue.
 
 The real fix would have been that the standard clarifies that
-the base64 url variant is incorrect and the other browser engine changes
+the base64url variant is incorrect and the other browser engine changes
 their behavior.
 
 But due to (somewhat unrelated) issues around proliferation of standards, web
@@ -58,7 +58,7 @@ a parser and a resulting data structure.
 
 For a standard, this specification needs a shared agreement that is also
 widely and consistently implemented. This will work best with iterative
-co-design of the spec, the implementations and intense dicsussions of
+co-design of the spec, the implementations and intense discussions of
 corner cases.
 Some may go further and use [shared test suites](https://github.com/web-platform-tests/wpt/).
 
@@ -126,4 +126,4 @@ remove ambiguity and allow internet standards to mature.
 
 In the end, standards are not secure because they are written down. They are secure because people continue to question, understand, and maintain them.
 
- [^1]: [Parsin JSON is a minefield](https://seriot.ch/security/parsing_json.html), [YML: Devfile file write vulnerability in GitLab](https://gitlab-com.gitlab.io/gl-security/security-tech-notes/security-research-tech-notes/devfile/), [XML: Sign in as anyone: Bypassing SAML SSO authentication with parser differentials](https://github.blog/security/sign-in-as-anyone-bypassing-saml-sso-authentication-with-parser-differentials/), and more: [OffensiveCon25 - Joernchen - Parser Differentials: When Interpretation Becomes a Vulnerability](https://www.youtube.com/watch?v=Dq_KVLXzxH8)
+ [^1]: [Parsing JSON is a minefield](https://seriot.ch/security/parsing_json.html), [YAML: Devfile file write vulnerability in GitLab](https://gitlab-com.gitlab.io/gl-security/security-tech-notes/security-research-tech-notes/devfile/), [XML: Sign in as anyone: Bypassing SAML SSO authentication with parser differentials](https://github.blog/security/sign-in-as-anyone-bypassing-saml-sso-authentication-with-parser-differentials/), and more: [OffensiveCon25 - Joernchen - Parser Differentials: When Interpretation Becomes a Vulnerability](https://www.youtube.com/watch?v=Dq_KVLXzxH8)
