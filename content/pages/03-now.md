@@ -1,9 +1,10 @@
 Title: Now
 Slug: now
 
-*Last Updated: April 2026*
+*Last Updated: August 2026*
 
-Here's a list of thigs that are currently happening. Or at least soon.
+Given that I am updating this just a few times a year, the "now" bit shouldn't be taken too literally.
+So here's a list of thigs that happened just recently, are happening right now are about to happen very soon.
 
 ### Life
 
@@ -13,13 +14,14 @@ Here's a list of thigs that are currently happening. Or at least soon.
 
 ### Work
 
-- Thinking about the next iteration for `setHTML()`
-- Lots of conferences and travel this year.
-- Maybe learn some more C++?
-- Would still like to find time to hunt for a bug of my own, for a change :')
+- Expanding the team to do so much more.
+- Now that the Sanitizer API has shipped, I am suggesting a way to [perform implicit sanitization based on Trusted Types](https://github.com/mozilla/explainers/blob/main/trusted-or-sanitized-html.md)
+- Lots of conferences and travel this year. I already visited Vienna and Toronto and I'm looking forward to visiting Toronto (again) and Karlsruhe.
 
 ### Reading
 
-- "The Goldfinch" by Donna Tartt. Really great read.
+- I read my first Jules Verne novel (Journey to the Center of the World). Liked it.
+- "The Goldfinch" by Donna Tartt was a really great rea a really great read.
+- The Monkeywrench Gang by Edward Abbey
 
 Inspired by [Derek Sivers' "now" page](https://sive.rs/now).
