@@ -7,4 +7,4 @@ make publish
 
 echo
 echo Rsync
-rsync  -r output/* fbcom@kushida.uberspace.de:web/frederikbraun.de/
+rsync  -r output/* freddy@leda.uberspace.de:www/frederikbraun.de/

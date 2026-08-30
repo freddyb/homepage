@@ -5,6 +5,7 @@ Slug: publications
 
 ## Presentations
 
+* The Devil is in the Defaults, at OWASP AppSec EU 2026 in Vienna, [Video](https://www.youtube.com/watch?v=b7RlQdvPY34) .
 * *With Carrots & Sticks: Can the Browser Handle Web Security?* - **Keynote** at <abbr title="Measurements, Attacks, and Defenses for the Web">MadWeb</abbr> in San Diego - 2024, [Blog post](madweb-keynote-2025.html).
 * Dealing With Cross-Site Attacks, at German OWASP Day in Leipzig - 2024,
 [Blog post](/modern-solutions-xsleaks.html), [Video](https://media.ccc.de/v/god2024-56286-modern-solutions-against-c)
@@ -29,8 +30,8 @@ in Hamburg and at Hack in Paris - 2013: [Paper](/publications/thesis/Thesis-Orig
 
 ## Projects
 
-* [Sanitizer API](https://github.com/WICG/sanitizer-api), an upcoming standard
-that defines built-in HTML/XSS sanitizer primitives for the browser.
+* [HTML Sanitizer API](https://html.spec.whatwg.org/#html-sanitization) - has
+  now been upstreamed into the WHATWG HTML standard.
 * [eslint plugin "no unsanitized"](https://github.com/mozilla/eslint-plugin-no-unsanitized),
 a plugin for the popular JavaScript linter that helps finding and fixing
 unsanitized HTML interpolation, which could lead to XSS vulnerabilities.
@@ -49,6 +50,9 @@ rewrites HTML source code into DOM instructions (`createElement`, `appendChild` 
 
 ## Blog posts elsewhere
 
+* [Behind the Scenes Hardening Firefox with Claude Mythos Preview](https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/)
+with Brian Grinstead, and Christian Holler. Based on the work of many people in
+my team.
 * [Hardening the Firefox Frontend with Content Security Policies](https://attackanddefense.dev/2025/04/09/hardening-the-firefox-frontend-with-content-security-policies.html) with Tom Schuster, Christoph Kerschbaumer
 * [The Evolution of HTTPS Adoption in Firefox](https://attackanddefense.dev/2025/03/31/https-first-in-firefox-136.html), with Simon Friedberger, Malte Jürgens, Christoph Kerschbaumer
 * [Firefox will upgrade more Mixed Content in Version 127](https://blog.mozilla.org/security/2024/06/05/firefox-will-upgrade-more-mixed-content-in-version-127/), with Malte Jürgens, Simon Friedberger, and Christoph Kerschbaumer (June 5, 2024)
@@ -63,6 +67,7 @@ rewrites HTML source code into DOM instructions (`createElement`, `appendChild` 
 
 ## Papers
 
+* Large Scale Measurement and Real-World Mitigation of Web Browser Fingerprinting in the Wild, to appear at the ACM Conference on Computer and Communications Security (CCS) 2026 in The Hague, Netherlands.
 * The State of https Adoption on the Web, at <abbr title="Measurements, Attacks, and Defenses for the Web">MadWeb</abbr> in San Diego - 2024, [PDF](https://research.mozilla.org/files/2025/03/the_state_of_https_adoption_on_the_web.pdf)
 * [Hardening Firefox against Injection Attacks (PDF)](/publications/hardening_paper.pdf), with Christoph Kerschbaumer, Tom Ritter; SecWeb - Designing Security for the Web; Genova, Italy, September 2020
 * [X-Frame-Options: All about Clickjacking?](/xfo-clickjacking.pdf)
@@ -75,6 +80,10 @@ Diploma thesis, Summer/Fall 2012.
 
 I have also served on the Program Committee of various conferences.
 
+* 33rd ACM Conference on Computer and Communications Security (CCS) 2026 in The
+  Hague, The Netherlands.
+* German OWASP Day (GOD), Karlsruhe 2026
+* German OWASP Day (GOD), Düsseldorf 2025
 * Workshop on Measurements, Attacks, and Defenses for the Web (MADWeb) 2025.
 * German OWASP Day (GOD), Leipzig 2024
 * The Network and Distributed System Security (NDSS) Symposium 2023.
