@@ -6,7 +6,7 @@ Slug: publications
 ## Presentations
 
 * The Devil is in the Defaults, at OWASP AppSec EU 2026 in Vienna, [Video](https://www.youtube.com/watch?v=b7RlQdvPY34) .
-* *With Carrots & Sticks: Can the Browser Handle Web Security?* - **Keynote** at <abbr title="Measurements, Attacks, and Defenses for the Web">MadWeb</abbr> in San Diego - 2024, [Blog post](madweb-keynote-2025.html).
+* *With Carrots & Sticks: Can the Browser Handle Web Security?* - **Keynote** at <abbr title="Measurements, Attacks, and Defenses for the Web">MadWeb</abbr> in San Diego - 2024, [Blog post](/madweb-keynote-2025.html).
 * Dealing With Cross-Site Attacks, at German OWASP Day in Leipzig - 2024,
 [Blog post](/modern-solutions-xsleaks.html), [Video](https://media.ccc.de/v/god2024-56286-modern-solutions-against-c)
 * Cross Origin Isolation at OWASP Berlin Meeting and PraSec - 2024,
